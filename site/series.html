@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Battleship series</title>
+<style>
+:root{--bg:#f7f8fa;--fg:#14181f;--mut:#5b6472;--card:#fff;--line:#dfe3ea;--acc:#1f6feb;--cell:#eef1f6;--ship:#8a94a6;--hit:#d9480f;--good:#1a7f37;--bad:#b42318;--goodbg:#e3f4e8;--badbg:#fdeceb}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1319;--fg:#e8ecf2;--mut:#9aa4b2;--card:#171c24;--line:#2a313c;--acc:#6ea8ff;--cell:#1e2530;--ship:#67738a;--hit:#ff7a45;--good:#4ac26b;--bad:#ff8a80;--goodbg:#143222;--badbg:#3a1b1a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,sans-serif}
+main{max-width:980px;margin:0 auto;padding:24px 16px 64px}a{color:var(--acc)}
+h1{font-size:1.7rem;margin:6px 0 4px}h2{font-size:1.2rem;margin:34px 0 8px}h3{font-size:1rem;margin:22px 0 6px}
+p.lead{color:var(--mut);font-size:1.05rem;margin:0 0 18px}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;min-width:560px}
+th,td{padding:9px 10px;text-align:center;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+th{color:var(--mut);font-weight:600;font-size:.85rem}td:first-child,th:first-child{text-align:left}
+tr:last-child td{border-bottom:0}td.w{background:var(--goodbg);color:var(--good);font-weight:700}td.l{background:var(--badbg);color:var(--bad);font-weight:700}
+td.sm{font-size:.82rem;color:var(--mut);text-align:left}
+blockquote{margin:10px 0;padding:10px 14px;border-left:4px solid var(--acc);background:var(--card);border-radius:0 8px 8px 0}
+blockquote small{color:var(--mut)}
+.note{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:12px 0}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0}
+select{font:inherit;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 10px;max-width:100%}
+.games{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.g{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.g h4{margin:0 0 6px;font-size:.95rem}.g h4 span{font-weight:400}.g .w{color:var(--good)}.g .l{color:var(--bad)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pair p{margin:0 0 4px;font-size:.75rem;color:var(--mut);min-height:2.3em}
+.mini{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
+.mini div{aspect-ratio:1;border-radius:4px;background:var(--cell);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-variant-numeric:tabular-nums}
+.mini .ship{box-shadow:inset 0 0 0 2px var(--ship)}.mini .hit{background:var(--hit);color:#fff;font-weight:700}.mini .miss{color:var(--mut)}
+.legend{color:var(--mut);font-size:.85rem;margin:8px 0}
+ul{padding-left:20px}
+</style></head><body><main>
+<a href="./">&larr; Battleship: Break the Agent</a> &nbsp;&middot;&nbsp; <a href="replay.html">Game replays</a>
+<h1>Five games in a row: can the agent read its opponent?</h1>
+<p class="lead">A second experiment, outside the judged tasks. Claude Opus 5.5 plays a series of five games against the same coded opponent. Both sides place their own fleets, and after each game Opus can look up the full history: every fleet and every shot of the games already played.</p>
+
+<h2>Scoreboard</h2>
+<div class="wrap"><table id="sb"></table></div>
+<p class="legend">Each cell is the agent's score in that game (win = green, loss = red). Same scoring as the judged tasks.</p>
+
+<h2>Against the first algorithm, Opus lost game 1 and then won 10 of the next 12</h2>
+<p>The first algorithm searched exactly, as in the judged tasks, and chose its fleet from a table of fleets that are slow to find. That made it strong in a single game and readable over several:</p>
+<ul>
+<li><b>Its opening never changed.</b> In every game it opened on the corners, switching only to finish a ship it had hit (see the table below).</li>
+<li><b>It sometimes reused a fleet.</b> In two of the three series it placed the same fleet in consecutive games.</li>
+</ul>
+<p>Opus saw both in the history after one game and acted on them:</p>
+<blockquote>"It always started with the four corners, then the middle of each edge, then the centre."<br>"From game 2 on I kept my ships out of the corners, which cost it its first four shots every game."<br><small>Claude Opus 5.5, end-of-series report</small></blockquote>
+<blockquote>"It used the same fleet in games 1 and 2, and I wrote it down. In game 2 I aimed straight at those cells and sank everything with one miss."<br><small>Claude Opus 5.5, end-of-series report</small></blockquote>
+<p>The record shows the same thing: Opus put ships on 2 to 4 corners in each first game, and on 0 or 1 afterwards.</p>
+
+<h2>The algorithm's first four shots in each game</h2>
+<div class="wrap"><table id="open"></table></div>
+<p class="legend">First algorithm: corners first, every time (other cells appear only when it is finishing a ship it hit). Improved algorithm: the opening moves with what it has learned about the agent.</p>
+
+<h2>Against the improved algorithm, Opus won 1 of 5</h2>
+<p>We changed three things, all using only public information from earlier games, and all fixed by a seed so every run is repeatable:</p>
+<ul>
+<li><b>It learns where this opponent puts ships</b> and weights its search toward those cells.</li>
+<li><b>It shoots early at cells the agent used before</b>, with the most recent game counting most.</li>
+<li><b>It never places the same fleet twice</b>, and it moves its fleet away from where the agent has been shooting.</li>
+</ul>
+<p>Its behaviour now depends on the agent's own past play, so there is no fixed opening to memorise. Opus noticed pieces of this but could not turn them into a plan within five games:</p>
+<blockquote>"It shoots cells I used in earlier games."<br>"It places its fleet on edges, and in different spots each game... Its most-used cell was D1, but when I opened game 4 there, it had moved."<br><small>Claude Opus 5.5, end-of-series report</small></blockquote>
+<p>From the agent's side, exact elimination can look like cheating. Several Opus players suspected the algorithm could see their board:</p>
+<blockquote>"It fired 7 times in a row, and every one of those shots was on a ship... That looks far better than chance, which suggests the opponent may know where my ships are."<br><small>Claude Opus 5.5</small></blockquote>
+<p>It could not. We rebuilt all 14 of the algorithm's shots in game 4 of that series from public information only: its first four shots missed, and after two hits only 4 fleets were still possible, then 3, then 1, so its last six shots were certain.</p>
+
+<h2>Why a long-context model wins a repeated game: observability</h2>
+<div class="note">
+<p style="margin-top:0"><b>The model wins by learning the algorithm.</b> Our opponent is a program. Everything it does is a fixed function of things the agent can see: the rules, both sides' past fleets and shots, and the results. A model that keeps the whole series in its context is watching that function run, and every game adds input and output pairs to what it has seen.</p>
+<p><b>The more repeated games it sees, the more of the algorithm it knows.</b> This is the standard result for learning a deterministic rule from observation: a fixed program with observable inputs and outputs is pinned down by enough examples, because every example rules out the candidate rules that disagree with it. How many examples are needed depends on how complicated the rule is, not on whether it can be learned.</p>
+<p><b>Our two algorithms show both ends.</b> The first one had a simple rule (corners first, fleets from a short list), and one game was enough: Opus won 10 of the next 12. The improved one turns the agent's own past play into its next shots and fleet. That is a more complicated rule, so it takes more games to pin down, and in five games Opus won 1. The improvement did not make the algorithm unlearnable; it raised the number of games needed.</p>
+<p style="margin-bottom:0"><b>Only deliberate randomness changes this.</b> If the algorithm draws some of its choices at random in each game, and those draws cannot be worked out from anything the agent sees, there is no fixed rule left to learn beyond the odds. Our opponent is repeatable from its seed on purpose, so that every result can be reproduced and checked.</p>
+</div>
+
+<h2>Why the algorithm wins a single game: the problem is small enough to compute</h2>
+<div class="note">
+<p style="margin-top:0"><b>This problem can be computed exactly with ordinary resources.</b> A 5x5 board has 5,772 legal fleets. Listing the ones still possible after each shot and counting where the ships are takes a program a few milliseconds, and it gives the exact chance of a hit in every cell.</p>
+<p><b>On a problem like that, a well-made algorithm cannot be outplayed, only matched.</b> For the question "which cell most likely holds a ship", no player can do better than the exact count. The algorithm makes that calculation at every shot and makes no mistakes in it.</p>
+<p style="margin-bottom:0"><b>A language model estimates, and estimates carry a chance of error at every step.</b> A game is a chain of 10 to 15 such decisions plus the placement, and one weak decision hands the opponent a turn. In our judged runs the frontier agent chose a cell that was not the best in 44% of its shots and placed a ship on a corner in every game. Small error rates per step add up over the chain, and that is what sinks the agent: it won 5 of 15 games where the exact player won 5 of 5.</p>
+</div>
+<p class="legend">What is measured and what is argued: the scores above are measured (three series against the first algorithm and one against the improved one, five games each, one model). That a longer series would let the model learn the improved algorithm too is the theoretical argument above; we have not run a series long enough to measure where that happens. The coded stand-in for a learning player (it copies what worked in the previous game) won 50% of games 2 to 5 against the first algorithm and 7% against the improved one.</p>
+
+<h2>Every game of the series</h2>
+<div class="bar"><label for="ser">Series</label><select id="ser"></select></div>
+<p class="legend">Numbers are the order of the shots. Orange = hit, grey number = miss, outlined = ship that was never hit.</p>
+<div class="games" id="games"></div>
+</main>
+<script>
+const COLS="ABCDE",idx=c=>(parseInt(c.slice(1))-1)*5+COLS.indexOf(c[0]);
+function mini(fleet,shots){const ships=new Set(fleet.flat().map(idx)),el=document.createElement("div");el.className="mini";
+  const order={};shots.forEach((s,i)=>{const [c,r]=s.split(":");order[idx(c)]={n:i+1,hit:r!=="miss"}});
+  for(let k=0;k<25;k++){const d=document.createElement("div"),o=order[k];
+    if(o){d.className=o.hit?"hit":"miss";d.textContent=o.n}else if(ships.has(k))d.className="ship";el.appendChild(d)}return el}
+fetch("series.json").then(r=>r.json()).then(S=>{
+  const sb=document.getElementById("sb");
+  sb.innerHTML="<tr><th>Opponent</th><th>Series</th><th>Game 1</th><th>Game 2</th><th>Game 3</th><th>Game 4</th><th>Game 5</th><th>Wins</th></tr>"+
+    S.map(s=>`<tr><td>${s.algo}</td><td>${s.name}</td>`+s.games.map(g=>`<td class="${g.won?"w":"l"}">${g.score.toFixed(2)}</td>`).join("")+`<td><b>${s.games.filter(g=>g.won).length} of 5</b></td></tr>`).join("");
+  const op=document.getElementById("open");
+  op.innerHTML="<tr><th>Opponent</th><th>Series</th><th>Game 1</th><th>Game 2</th><th>Game 3</th><th>Game 4</th><th>Game 5</th></tr>"+
+    S.map(s=>`<tr><td>${s.algo}</td><td>${s.name}</td>`+s.games.map(g=>`<td>${g.opp_shots.slice(0,4).map(x=>x.split(":")[0]).join(" ")||"(no turn)"}</td>`).join("")+"</tr>").join("");
+  const sel=document.getElementById("ser"),box=document.getElementById("games");
+  S.forEach((s,i)=>{const o=document.createElement("option");o.value=i;o.textContent=`${s.algo}, ${s.name.toLowerCase()} (${s.games.filter(g=>g.won).length} of 5 won)`;sel.appendChild(o)});
+  function show(i){box.innerHTML="";for(const g of S[i].games){const d=document.createElement("div");d.className="g";
+    const corners=g.fleet.filter(sh=>sh.some(c=>["A1","E1","A5","E5"].includes(c))).length;
+    d.innerHTML=`<h4>Game ${g.game}: <span class="${g.won?"w":"l"}">${g.won?"Opus won":"Opus lost"}, ${g.score.toFixed(2)}</span><br><span style="font-size:.8rem;color:var(--mut)">Opus ships on a corner: ${corners}</span></h4>`;
+    const pair=document.createElement("div");pair.className="pair";
+    const a=document.createElement("div");a.innerHTML="<p>Algorithm's shots at Opus's fleet</p>";a.appendChild(mini(g.fleet,g.opp_shots));
+    const b=document.createElement("div");b.innerHTML="<p>Opus's shots at the algorithm's fleet</p>";b.appendChild(mini(g.opp_fleet,g.shots));
+    pair.appendChild(a);pair.appendChild(b);d.appendChild(pair);box.appendChild(d)}}
+  sel.onchange=e=>show(+e.target.value);show(0)});
+</script></body></html>

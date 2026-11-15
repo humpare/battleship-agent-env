@@ -1,0 +1,126 @@
+{
+ "scenario": "d-density-s1",
+ "scenario_hash": "73b7b5aa7225a41c",
+ "score": 0.2,
+ "completed": 2,
+ "trains": 10,
+ "unfinished": 8,
+ "total_lateness": 0,
+ "final_tick": 529,
+ "decisions": 1,
+ "diagnostics": {
+  "blocked_train_ticks": 0,
+  "deadlocked_trains": [],
+  "malfunctions_seen": 0
+ },
+ "per_train": [
+  {
+   "train": "T1",
+   "completed": true,
+   "arrival_tick": 49,
+   "deadline": 79,
+   "lateness": 0,
+   "score": 1.0,
+   "departed": true,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T2",
+   "completed": true,
+   "arrival_tick": 53,
+   "deadline": 79,
+   "lateness": 0,
+   "score": 1.0,
+   "departed": true,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T3",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 83,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T4",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 84,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T5",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 87,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T6",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 89,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T7",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 89,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T8",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 93,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T9",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 94,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T10",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 96,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  }
+ ],
+ "mode": "agent",
+ "wall_seconds": 30.1,
+ "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://inference.verda.com/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+ "model": "kimi-k3-1-pro",
+ "llm_calls": 3,
+ "prompt_tokens": 6101,
+ "completion_tokens": 2457,
+ "llm_seconds": 30.0
+}

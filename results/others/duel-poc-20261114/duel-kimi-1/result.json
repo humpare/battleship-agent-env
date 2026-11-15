@@ -1,0 +1,40 @@
+{
+    "schema_version": 1,
+    "id": "4e20199e-abc2-4a69-8513-216898209790",
+    "started_at": "2026-11-14T06:17:18.761501",
+    "updated_at": "2026-11-14T06:22:10.872948",
+    "finished_at": "2026-11-14T06:22:10.872948",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "opencode__verda/kimi-k3-1-pro__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.555556
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.555556": [
+                            "duel-s3__kC6dXo4"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 452304,
+        "n_cache_tokens": 434240,
+        "n_output_tokens": 2273,
+        "cost_usd": null
+    }
+}

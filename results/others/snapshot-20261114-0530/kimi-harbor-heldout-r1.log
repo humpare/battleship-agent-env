@@ -1,0 +1,2 @@
+LiteLLM could not resolve model 'verda/kimi-k3-1-pro'; passing it unchanged to the agent. For an OpenAI-compatible endpoint, use openai/<model-id> with OPENAI_API_KEY and OPENAI_BASE_URL. Use --api-format if supported, or --api-key-name and --base-url to override the connection.
+LiteLLM could not resolve model 'verda/kimi-k3-1-pro'; passing it unchanged to the agent. For an OpenAI-compatible endpoint, use openai/<model-id> with OPENAI_API_KEY and OPENAI_BASE_URL. Use --api-format if supported, or --api-key-name and --base-url to override the connection.

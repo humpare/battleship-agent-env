@@ -1,0 +1,472 @@
+{
+ "id": "g-scarce-s301",
+ "meta": {
+  "stage": "g-scarce",
+  "split": "probe",
+  "seed": 301,
+  "loops": 3,
+  "single_len": 7,
+  "loop_len": 1,
+  "siding_rows": 1,
+  "headway": 3,
+  "slack": 1.5,
+  "free_run_ticks": 46
+ },
+ "horizon": 759,
+ "max_advance": 5,
+ "lateness_cap": 46,
+ "layout": {
+  "junctions": {
+   "JW": {
+    "cell": [
+     5,
+     6
+    ],
+    "stem": "S1",
+    "branches": [
+     "W_dep",
+     "W_arr"
+    ]
+   },
+   "J1w": {
+    "cell": [
+     5,
+     14
+    ],
+    "stem": "S1",
+    "branches": [
+     "L1a",
+     "L1b"
+    ]
+   },
+   "J1e": {
+    "cell": [
+     5,
+     16
+    ],
+    "stem": "S2",
+    "branches": [
+     "L1a",
+     "L1b"
+    ]
+   },
+   "J2w": {
+    "cell": [
+     5,
+     24
+    ],
+    "stem": "S2",
+    "branches": [
+     "L2a",
+     "L2b"
+    ]
+   },
+   "J2e": {
+    "cell": [
+     5,
+     26
+    ],
+    "stem": "S3",
+    "branches": [
+     "L2a",
+     "L2b"
+    ]
+   },
+   "J3w": {
+    "cell": [
+     5,
+     34
+    ],
+    "stem": "S3",
+    "branches": [
+     "L3a",
+     "L3b"
+    ]
+   },
+   "J3e": {
+    "cell": [
+     5,
+     36
+    ],
+    "stem": "S4",
+    "branches": [
+     "L3a",
+     "L3b"
+    ]
+   },
+   "JE": {
+    "cell": [
+     5,
+     44
+    ],
+    "stem": "S4",
+    "branches": [
+     "E_dep",
+     "E_arr"
+    ]
+   }
+  },
+  "sections": [
+   {
+    "name": "W_dep",
+    "kind": "origin",
+    "a": null,
+    "b": "JW",
+    "path": [
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      6
+     ]
+    ]
+   },
+   {
+    "name": "W_arr",
+    "kind": "terminus",
+    "a": "JW",
+    "b": null,
+    "path": [
+     [
+      5,
+      6
+     ],
+     [
+      2,
+      6
+     ]
+    ]
+   },
+   {
+    "name": "S1",
+    "kind": "single",
+    "a": "JW",
+    "b": "J1w",
+    "path": [
+     [
+      5,
+      6
+     ],
+     [
+      5,
+      14
+     ]
+    ]
+   },
+   {
+    "name": "L1a",
+    "kind": "loop",
+    "a": "J1w",
+    "b": "J1e",
+    "path": [
+     [
+      5,
+      14
+     ],
+     [
+      5,
+      16
+     ]
+    ]
+   },
+   {
+    "name": "L1b",
+    "kind": "loop",
+    "a": "J1w",
+    "b": "J1e",
+    "path": [
+     [
+      5,
+      14
+     ],
+     [
+      6,
+      14
+     ],
+     [
+      6,
+      16
+     ],
+     [
+      5,
+      16
+     ]
+    ]
+   },
+   {
+    "name": "S2",
+    "kind": "single",
+    "a": "J1e",
+    "b": "J2w",
+    "path": [
+     [
+      5,
+      16
+     ],
+     [
+      5,
+      24
+     ]
+    ]
+   },
+   {
+    "name": "L2a",
+    "kind": "loop",
+    "a": "J2w",
+    "b": "J2e",
+    "path": [
+     [
+      5,
+      24
+     ],
+     [
+      5,
+      26
+     ]
+    ]
+   },
+   {
+    "name": "L2b",
+    "kind": "loop",
+    "a": "J2w",
+    "b": "J2e",
+    "path": [
+     [
+      5,
+      24
+     ],
+     [
+      6,
+      24
+     ],
+     [
+      6,
+      26
+     ],
+     [
+      5,
+      26
+     ]
+    ]
+   },
+   {
+    "name": "S3",
+    "kind": "single",
+    "a": "J2e",
+    "b": "J3w",
+    "path": [
+     [
+      5,
+      26
+     ],
+     [
+      5,
+      34
+     ]
+    ]
+   },
+   {
+    "name": "L3a",
+    "kind": "loop",
+    "a": "J3w",
+    "b": "J3e",
+    "path": [
+     [
+      5,
+      34
+     ],
+     [
+      5,
+      36
+     ]
+    ]
+   },
+   {
+    "name": "L3b",
+    "kind": "loop",
+    "a": "J3w",
+    "b": "J3e",
+    "path": [
+     [
+      5,
+      34
+     ],
+     [
+      6,
+      34
+     ],
+     [
+      6,
+      36
+     ],
+     [
+      5,
+      36
+     ]
+    ]
+   },
+   {
+    "name": "S4",
+    "kind": "single",
+    "a": "J3e",
+    "b": "JE",
+    "path": [
+     [
+      5,
+      36
+     ],
+     [
+      5,
+      44
+     ]
+    ]
+   },
+   {
+    "name": "E_dep",
+    "kind": "origin",
+    "a": "JE",
+    "b": null,
+    "path": [
+     [
+      5,
+      44
+     ],
+     [
+      5,
+      49
+     ]
+    ]
+   },
+   {
+    "name": "E_arr",
+    "kind": "terminus",
+    "a": "JE",
+    "b": null,
+    "path": [
+     [
+      5,
+      44
+     ],
+     [
+      2,
+      44
+     ]
+    ]
+   }
+  ]
+ },
+ "trains": [
+  {
+   "id": "T1",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 1,
+   "deadline": 70
+  },
+  {
+   "id": "T2",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 3,
+   "deadline": 72
+  },
+  {
+   "id": "T3",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 8,
+   "deadline": 77
+  },
+  {
+   "id": "T4",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 10,
+   "deadline": 79
+  },
+  {
+   "id": "T5",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 19,
+   "deadline": 88
+  },
+  {
+   "id": "T6",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 19,
+   "deadline": 88
+  },
+  {
+   "id": "T7",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 21,
+   "deadline": 90
+  },
+  {
+   "id": "T8",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 21,
+   "deadline": 90
+  },
+  {
+   "id": "T9",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 36,
+   "deadline": 105
+  },
+  {
+   "id": "T10",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 36,
+   "deadline": 105
+  },
+  {
+   "id": "T11",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 37,
+   "deadline": 106
+  },
+  {
+   "id": "T12",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 47,
+   "deadline": 116
+  },
+  {
+   "id": "T13",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 50,
+   "deadline": 119
+  },
+  {
+   "id": "T14",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 58,
+   "deadline": 127
+  }
+ ],
+ "malfunctions": [
+  {
+   "tick": 11,
+   "train": "T1",
+   "duration": 15
+  },
+  {
+   "tick": 37,
+   "train": "T5",
+   "duration": 13
+  }
+ ]
+}

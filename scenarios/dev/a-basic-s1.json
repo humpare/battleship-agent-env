@@ -1,0 +1,234 @@
+{
+ "id": "a-basic-s1",
+ "meta": {
+  "stage": "a-basic",
+  "split": "dev",
+  "seed": 1,
+  "loops": 1,
+  "single_len": 7,
+  "loop_len": 3,
+  "headway": 6,
+  "slack": 3.0,
+  "free_run_ticks": 28
+ },
+ "horizon": 149,
+ "max_advance": 5,
+ "lateness_cap": 28,
+ "layout": {
+  "junctions": {
+   "JW": {
+    "cell": [
+     5,
+     6
+    ],
+    "stem": "S1",
+    "branches": [
+     "W_dep",
+     "W_arr"
+    ]
+   },
+   "J1w": {
+    "cell": [
+     5,
+     14
+    ],
+    "stem": "S1",
+    "branches": [
+     "L1a",
+     "L1b"
+    ]
+   },
+   "J1e": {
+    "cell": [
+     5,
+     18
+    ],
+    "stem": "S2",
+    "branches": [
+     "L1a",
+     "L1b"
+    ]
+   },
+   "JE": {
+    "cell": [
+     5,
+     26
+    ],
+    "stem": "S2",
+    "branches": [
+     "E_dep",
+     "E_arr"
+    ]
+   }
+  },
+  "sections": [
+   {
+    "name": "W_dep",
+    "kind": "origin",
+    "a": null,
+    "b": "JW",
+    "path": [
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      6
+     ]
+    ]
+   },
+   {
+    "name": "W_arr",
+    "kind": "terminus",
+    "a": "JW",
+    "b": null,
+    "path": [
+     [
+      5,
+      6
+     ],
+     [
+      2,
+      6
+     ]
+    ]
+   },
+   {
+    "name": "S1",
+    "kind": "single",
+    "a": "JW",
+    "b": "J1w",
+    "path": [
+     [
+      5,
+      6
+     ],
+     [
+      5,
+      14
+     ]
+    ]
+   },
+   {
+    "name": "L1a",
+    "kind": "loop",
+    "a": "J1w",
+    "b": "J1e",
+    "path": [
+     [
+      5,
+      14
+     ],
+     [
+      5,
+      18
+     ]
+    ]
+   },
+   {
+    "name": "L1b",
+    "kind": "loop",
+    "a": "J1w",
+    "b": "J1e",
+    "path": [
+     [
+      5,
+      14
+     ],
+     [
+      7,
+      14
+     ],
+     [
+      7,
+      18
+     ],
+     [
+      5,
+      18
+     ]
+    ]
+   },
+   {
+    "name": "S2",
+    "kind": "single",
+    "a": "J1e",
+    "b": "JE",
+    "path": [
+     [
+      5,
+      18
+     ],
+     [
+      5,
+      26
+     ]
+    ]
+   },
+   {
+    "name": "E_dep",
+    "kind": "origin",
+    "a": "JE",
+    "b": null,
+    "path": [
+     [
+      5,
+      26
+     ],
+     [
+      5,
+      31
+     ]
+    ]
+   },
+   {
+    "name": "E_arr",
+    "kind": "terminus",
+    "a": "JE",
+    "b": null,
+    "path": [
+     [
+      5,
+      26
+     ],
+     [
+      2,
+      26
+     ]
+    ]
+   }
+  ]
+ },
+ "trains": [
+  {
+   "id": "T1",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 1,
+   "deadline": 85
+  },
+  {
+   "id": "T2",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 2,
+   "deadline": 86
+  },
+  {
+   "id": "T3",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 13,
+   "deadline": 97
+  },
+  {
+   "id": "T4",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 15,
+   "deadline": 99
+  }
+ ],
+ "malfunctions": []
+}

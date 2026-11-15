@@ -1,0 +1,2 @@
+{"turn": 1, "content": "", "tool_calls": [{"id": "get_rules_0", "index": 0, "type": "function", "function": {"name": "get_rules", "arguments": "{}"}}]}
+{"turn": 2, "content": "", "tool_calls": [{"id": "observe_1", "index": 0, "type": "function", "function": {"name": "observe", "arguments": "{}"}}]}

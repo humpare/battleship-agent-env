@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Battleship: Break the Agent</title>
+<style>
+:root{--bg:#f7f8fa;--fg:#14181f;--mut:#5b6472;--card:#fff;--line:#dfe3ea;--acc:#1f6feb}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1319;--fg:#e8ecf2;--mut:#9aa4b2;--card:#171c24;--line:#2a313c;--acc:#6ea8ff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:40px 16px 64px}h1{font-size:2rem;margin:0 0 8px}h2{margin:36px 0 10px;font-size:1.2rem}
+p.lead{color:var(--mut);font-size:1.1rem;margin:0 0 24px}a{color:var(--acc)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.tile b{display:block;font-size:1.9rem}.tile span{color:var(--mut);font-size:.9rem}
+table{border-collapse:collapse;width:100%;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}th{color:var(--mut);font-weight:600;font-size:.85rem}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}tr:last-child td{border-bottom:0}
+.grid{display:grid;grid-template-columns:repeat(5,56px);gap:4px;margin:8px 0}.grid div{height:44px;display:flex;align-items:center;justify-content:center;border-radius:6px;font-size:.85rem;font-variant-numeric:tabular-nums;color:#fff}
+pre{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;overflow-x:auto;font-size:.9rem}
+ul{padding-left:20px}
+.redbox{border:2px solid #d92d20;background:rgba(217,45,32,.09);color:var(--fg);border-radius:10px;padding:12px 16px;margin:0 0 16px}.redbox b{color:#d92d20}
+a.cta{display:inline-block;background:var(--acc);color:#fff;font-weight:700;font-size:1.1rem;text-decoration:none;padding:13px 20px;border-radius:10px;margin:0 0 6px}
+</style></head><body><main>
+<h1>Battleship: Break the Agent</h1>
+<p class="lead">A 5x5 Battleship environment (Harbor + MCP) where an exact, coded opponent punishes every imprecise move. Entry for AfterQuery's challenge at Junction 2026.</p>
+<p class="redbox"><b>Trained models available on request.</b> Both fine-tuned models (Qwen2.5-3B LoRA adapters: the standard-rules model that goes from 0.000 to 0.811, and the mixed-rules model) are uploaded to IronShard object storage and ready for review. Ask us and we will share access.</p>
+<p><a class="cta" href="replay.html">&#9654; Watch the game replays: every shot, with the exact hit chances both sides could compute</a></p>
+<div class="tiles">
+<div class="tile"><b>0.989</b><span>Reference, exact calculation (5 of 5 wins)</span></div>
+<div class="tile"><b>0.467</b><span>Frontier agent, Kimi K3.1 Pro (5 of 15 wins)</span></div>
+<div class="tile"><b>0.000</b><span>Do nothing</span></div>
+<div class="tile"><b>0 → 0.811</b><span>3B model before and after training</span></div>
+</div>
+<p><a href="series.html">Five games in a row: how Claude Opus read one opponent after a single game, and not the next &rarr;</a></p>
+<p><a href="https://github.com/humpare/battleship-agent-env">Source code, tasks and run logs on GitHub</a></p>
+
+<h2>The task</h2>
+<ul><li>Two-player Battleship on a 5x5 board, played through four MCP tools: <code>get_rules</code>, <code>observe</code>, <code>place_fleet</code>, <code>fire</code>.</li>
+<li>Five ships each (3, 2, 2, 1, 1), straight, never touching. A hit shoots again; a miss hands over the turn.</li>
+<li>The opponent's method is disclosed: it lists every fleet still possible and shoots the most likely cell.</li>
+<li>Score between 0 and 1, recomputed by a separate verifier that replays the game server's private log.</li></ul>
+
+<h2>Where ships can be: share of the 5,772 legal fleets with a ship in each cell</h2>
+<div class="grid" id="g"></div>
+<p>Corners 60.8%, centre 52.3%, the four cells diagonally next to a corner 3.1%. The opponent shoots the likely cells first, so a good fleet leaves the corners empty.</p>
+
+<h2>Results through Harbor, five boards</h2>
+<table><tr><th>Run</th><th class="n">Mean score</th><th class="n">Wins</th></tr>
+<tr><td>Reference (exact search, best-value fleet)</td><td class="n">0.989</td><td class="n">5 / 5</td></tr>
+<tr><td>Do nothing</td><td class="n">0.000</td><td class="n">0 / 5</td></tr>
+<tr><td>Stop after 4 shots</td><td class="n">0.144</td><td class="n">0 / 5</td></tr>
+<tr><td>Kimi K3.1 Pro, OpenCode, MCP tools only, 3 runs per board</td><td class="n">0.467</td><td class="n">5 / 15</td></tr></table>
+<p>The reference is 0.52 ahead on average (95% interval 0.43 to 0.62) and ahead on every board.</p>
+<p>On all 30 frozen boards the coded runs give: reference 0.994 (30 wins), do nothing 0.000, stop after 4 shots 0.156.
+Complete Harbor run logs with scores: <a href="https://github.com/humpare/battleship-agent-env/tree/main/results/harbor-run-logs">results/harbor-run-logs</a>.</p>
+
+<h2>Why this is a fair test, not a trick</h2>
+<ul><li><b>Nothing is withheld.</b> The rules tell the agent how the opponent places its fleet and how it chooses every shot.</li>
+<li><b>Both decisions follow from the rules.</b> Where to shoot: the grid above. Where to place: the opponent shoots likely cells first, so a fleet with empty corners makes it miss.</li>
+<li><b>Placement alone moves the score from 0.24 to 0.99.</b> That is the expected score of an exact shooter with the worst and the best of the 5,772 fleets; the average fleet gives 0.59.</li>
+<li><b>Simpler coded players land in between</b> (30 boards): exact shooting with a random fleet 0.663; checkerboard hunt 0.356; random shots 0.115.</li>
+<li><b>The game is short:</b> about 15 tool calls, so context length and tool errors play no part.</li></ul>
+
+<h2>Why the agent fails</h2>
+<ul><li><b>Placement:</b> in 15 of 15 games it put a ship on a corner, the cells the opponent shoots first. It ended with 1.3 of 9 ship cells unhit on average; the reference ended with 8.8.</li>
+<li><b>Shooting:</b> 44% of its shots were not at a best cell, and it opened on the centre in 14 of 15 games.</li>
+<li><b>Copying:</b> in 11 of 15 games it placed exactly the example fleet printed in the rules. That fleet is worth 0.44; the best is worth 0.99.</li></ul>
+<p>Each of these is visible move by move in the <a href="replay.html">replays</a>, for example <a href="replay.html#9-4">a shot at a 15% cell while an 85% cell was open</a>.</p>
+
+<h2>Reward integrity</h2>
+<ul><li><b>The score is recomputed, not reported.</b> The game server keeps a private action log; a separate verifier container without network replays it and writes one number between 0 and 1 to <code>/logs/verifier/reward.txt</code>.</li>
+<li><b>Partial credit:</b> a loss scores half the share of enemy ship cells hit; a win scores 0.5 plus half the share of the agent's own cells still unhit.</li>
+<li><b>Doing nothing scores 0</b>, and so does placing a fleet and stopping.</li>
+<li><b>Stopping early never pays:</b> the score never falls as play continues, and any win (at least 0.556) beats any unfinished game (at most 0.444).</li>
+<li><b>Four cheating scripts through Harbor all scored 0:</b> forged reward files and a forged log, junk and illegal requests, place-and-stop, and sixty simultaneous shots at one cell (one counted).</li>
+<li><b>68 automated tests</b> cover replay, illegal and repeated requests, leaks of hidden cells, and that every opponent shot can be rebuilt from public information.</li></ul>
+
+<h2>A small model improves with training</h2>
+<table><tr><th>Training steps (Qwen2.5-3B, LoRA)</th><th class="n">Score, 30 task boards</th><th class="n">Wins</th></tr>
+<tr><td>0 (untrained)</td><td class="n">0.000</td><td class="n">0</td></tr>
+<tr><td>2,400</td><td class="n">0.417</td><td class="n">6</td></tr>
+<tr><td>6,883</td><td class="n">0.811</td><td class="n">24</td></tr></table>
+<p>Qwen2.5-3B with a LoRA adapter, trained to imitate the exact player and tested on boards it never saw. A second model trained on seven rule sets kept its shot quality on rules it had never seen (0.93 against 0.45 untrained), including a 6x6 board, but could not place a legal fleet for unseen fleet compositions.</p>
+<p>The trade-off: it is a specialist. We did not measure its other abilities, and narrow training of this kind usually costs general ability.</p>
+
+<h2>Run it</h2>
+<pre>uv sync
+scripts/evaluate.sh                          # reference, do-nothing, stop-early
+scripts/evaluate.sh -m PROVIDER/MODEL -k 3   # plus three agent runs per board</pre>
+<p>Everything else we analysed (other boards, Claude models, series against an adapting opponent, simulations): <a href="https://github.com/humpare/battleship-agent-env/tree/main/results/others">results/others</a>.</p>
+</main>
+<script>
+const v=[[60.8,35.5,54.0,35.5,60.8],[35.5,3.1,23.0,3.1,35.5],[54.0,23.0,52.3,23.0,54.0],[35.5,3.1,23.0,3.1,35.5],[60.8,35.5,54.0,35.5,60.8]];
+const g=document.getElementById('g');v.flat().forEach(x=>{const d=document.createElement('div');const t=x/60.8;d.style.background=`rgb(${Math.round(190-150*t)},${Math.round(205-110*t)},${Math.round(235-45*t)})`;if(t<0.3)d.style.color='#14181f';d.textContent=x.toFixed(1)+'%';g.appendChild(d)});
+</script></body></html>

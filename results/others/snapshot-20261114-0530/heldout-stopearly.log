@@ -1,0 +1,22 @@
+  12/12 Mean: 0.062 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:01:50 0:00:00
+heldout • oracle
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│     12 │          0 │ 0.062 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━┳━━━━━━━┓
+┃ Reward ┃ Count ┃
+┡━━━━━━━━╇━━━━━━━┩
+│ 0.25   │     1 │
+│ 0.5    │     1 │
+│ 0.0    │    10 │
+└────────┴───────┘
+
+Job Info
+Total runtime: 1m 50s
+Results written to runs/jobs/heldout-stopearly/result.json
+Inspect results by running `harbor view runs/jobs`
+Share results by running `harbor upload runs/jobs/heldout-stopearly`
+

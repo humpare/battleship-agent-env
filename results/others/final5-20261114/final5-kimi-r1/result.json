@@ -1,0 +1,52 @@
+{
+    "schema_version": 1,
+    "id": "0bc6dd19-b6ee-4163-adde-676910b71551",
+    "started_at": "2026-11-14T08:03:32.000039",
+    "updated_at": "2026-11-14T08:11:39.988605",
+    "finished_at": "2026-11-14T08:11:39.988605",
+    "n_total_trials": 5,
+    "stats": {
+        "n_completed_trials": 5,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "opencode__verda/kimi-k3-1-pro__duel5": {
+                "n_trials": 5,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.2555556
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.166667": [
+                            "duel5-exact-s1__UKuu6VQ"
+                        ],
+                        "0.0": [
+                            "duel5-exact-s2__YWzm4xo"
+                        ],
+                        "0.222222": [
+                            "duel5-exact-s3__eh9T42q"
+                        ],
+                        "0.833333": [
+                            "duel5-exact-s4__panSdFU"
+                        ],
+                        "0.055556": [
+                            "duel5-exact-s5__FNT7d5m"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 366323,
+        "n_cache_tokens": 337408,
+        "n_output_tokens": 3195,
+        "cost_usd": null
+    }
+}

@@ -1,0 +1,157 @@
+{"type": "header", "scenario": "f-sustained-s102", "scenario_hash": "3df7287c59059dce", "wall_time": 1794624703.956}
+{"type": "step", "decision_id": 1, "commands": [{"train": "T1", "action": "route", "route": ["W_dep", "S1", "L1a", "S2", "L2a"]}, {"train": "T2", "action": "route", "route": ["E_dep", "S4", "L3a", "S3", "L2b"]}, {"train": "T3", "action": "route", "route": ["W_dep", "S1", "L1a"]}, {"train": "T4", "action": "hold"}], "tick_after": 1, "score_delta": 0.0, "events": [{"tick": 1, "type": "departure_window_open", "train": "T1"}], "wall_time": 1794624751.243}
+{"type": "step", "decision_id": 2, "commands": [], "tick_after": 2, "score_delta": 0.0, "events": [{"tick": 2, "type": "departure_window_open", "train": "T2"}], "wall_time": 1794624753.203}
+{"type": "step", "decision_id": 3, "commands": [], "tick_after": 7, "score_delta": 0.0, "events": [{"tick": 7, "type": "departure_window_open", "train": "T3"}], "wall_time": 1794624756.382}
+{"type": "step", "decision_id": 4, "commands": [{"train": "T4", "action": "route", "route": ["W_dep", "S1", "L1a", "S2", "L2a"]}, {"train": "T5", "action": "route", "route": ["E_dep", "S4", "L3b"]}, {"train": "T6", "action": "route", "route": ["W_dep", "S1", "L1a"]}], "tick_after": 11, "score_delta": 0.0, "events": [{"tick": 11, "type": "departure_window_open", "train": "T4"}], "wall_time": 1794624826.621}
+{"type": "step", "decision_id": 5, "commands": [], "tick_after": 13, "score_delta": 0.0, "events": [{"tick": 13, "type": "departure_window_open", "train": "T5"}], "wall_time": 1794624828.482}
+{"type": "step", "decision_id": 6, "commands": [], "tick_after": 17, "score_delta": 0.0, "events": [{"tick": 17, "type": "departure_window_open", "train": "T6"}], "wall_time": 1794624829.976}
+{"type": "step", "decision_id": 7, "commands": [{"train": "T1", "action": "route", "route": ["S2", "L2a", "S3", "L3a", "S4", "E_arr"]}, {"train": "T2", "action": "route", "route": ["L3a", "S3", "L2b", "S2", "L1b"]}], "tick_after": 22, "score_delta": 0.0, "events": [{"tick": 22, "type": "reached_end_of_route", "train": "T3", "section": "L1a"}], "wall_time": 1794624920.771}
+{"type": "step", "decision_id": 8, "commands": [{"train": "T3", "action": "route", "route": ["L1a", "S2", "L2a", "S3", "L3a", "S4", "E_arr"]}, {"train": "T4", "action": "route", "route": ["S1", "L1b"]}, {"train": "T6", "action": "route", "route": ["S1", "L1b"]}, {"train": "T7", "action": "route", "route": ["W_dep", "S1", "L1b"]}, {"train": "T8", "action": "route", "route": ["E_dep", "S4", "L3b"]}], "tick_after": 23, "score_delta": 0.0, "events": [{"tick": 23, "type": "departure_window_open", "train": "T7"}], "wall_time": 1794624925.281}
+{"type": "step", "decision_id": 9, "commands": [{"train": "T9", "action": "route", "route": ["W_dep", "S1", "L1b"]}, {"train": "T10", "action": "route", "route": ["W_dep", "S1", "L1b"]}, {"train": "T11", "action": "route", "route": ["E_dep", "S4", "L3b"]}], "tick_after": 28, "score_delta": 0.0, "events": [], "wall_time": 1794624927.975}
+{"type": "step", "decision_id": 10, "commands": [], "tick_after": 29, "score_delta": 0.0, "events": [{"tick": 29, "type": "malfunction_started", "train": "T5", "ticks_remaining": 12}], "wall_time": 1794624929.45}
+{"type": "step", "decision_id": 11, "commands": [{"train": "T8", "action": "hold"}, {"train": "T11", "action": "hold"}, {"train": "T14", "action": "hold"}], "tick_after": 30, "score_delta": 0.0, "events": [{"tick": 30, "type": "reached_end_of_route", "train": "T4", "section": "L1b"}, {"tick": 30, "type": "departure_window_open", "train": "T8"}], "wall_time": 1794624964.081}
+{"type": "step", "decision_id": 12, "commands": [{"train": "T4", "action": "route", "route": ["L1b", "S2", "L2a", "S3", "L3a", "S4", "E_arr"]}, {"train": "T6", "action": "route", "route": ["L1b", "S2", "L2a"]}], "tick_after": 33, "score_delta": 0.0, "events": [{"tick": 33, "type": "departure_window_open", "train": "T9"}, {"tick": 33, "type": "departure_window_open", "train": "T10"}], "wall_time": 1794624966.852}
+{"type": "step", "decision_id": 13, "commands": [{"train": "T12", "action": "route", "route": ["W_dep", "S1", "L1b"]}, {"train": "T13", "action": "route", "route": ["W_dep", "S1", "L1b"]}, {"train": "T15", "action": "route", "route": ["W_dep", "S1", "L1b"]}, {"train": "T16", "action": "route", "route": ["W_dep", "S1", "L1b"]}], "tick_after": 34, "score_delta": 0.0, "events": [{"tick": 34, "type": "blocked", "train": "T10", "by": "contention"}], "wall_time": 1794624970.319}
+{"type": "step", "decision_id": 14, "commands": [], "tick_after": 36, "score_delta": 0.0, "events": [{"tick": 36, "type": "blocked", "train": "T4", "by": "contention"}, {"tick": 36, "type": "deadlock", "train": "T2"}, {"tick": 36, "type": "deadlock", "train": "T4"}], "wall_time": 1794624972.12}
+{"type": "step", "decision_id": 15, "commands": [{"train": "T6", "action": "route", "route": ["L1b", "S2", "L2a"]}, {"train": "T7", "action": "hold"}, {"train": "T9", "action": "hold"}, {"train": "T10", "action": "hold"}, {"train": "T12", "action": "hold"}, {"train": "T13", "action": "hold"}, {"train": "T15", "action": "hold"}, {"train": "T16", "action": "hold"}], "tick_after": 37, "score_delta": 0.0, "events": [{"tick": 37, "type": "blocked", "train": "T2", "by": "T4"}], "wall_time": 1794624975.938}
+{"type": "step", "decision_id": 16, "commands": [{"train": "T5", "action": "route", "route": ["L3b", "S3", "L2b"]}, {"train": "T6", "action": "hold"}], "tick_after": 39, "score_delta": 0.0, "events": [{"tick": 39, "type": "departure_window_open", "train": "T11"}], "wall_time": 1794624979.071}
+{"type": "step", "decision_id": 17, "commands": [], "tick_after": 42, "score_delta": 0.0, "events": [{"tick": 42, "type": "malfunction_ended", "train": "T5"}], "wall_time": 1794624981.378}
+{"type": "step", "decision_id": 18, "commands": [], "tick_after": 47, "score_delta": 0.0, "events": [], "wall_time": 1794624983.294}
+{"type": "step", "decision_id": 19, "commands": [{"train": "T5", "action": "hold"}], "tick_after": 49, "score_delta": 0.0625, "events": [{"tick": 49, "type": "arrived", "train": "T1"}], "wall_time": 1794624985.014}
+{"type": "step", "decision_id": 20, "commands": [], "tick_after": 50, "score_delta": 0.0, "events": [{"tick": 50, "type": "departure_window_open", "train": "T12"}], "wall_time": 1794624986.786}
+{"type": "step", "decision_id": 21, "commands": [], "tick_after": 55, "score_delta": 0.0625, "events": [{"tick": 55, "type": "arrived", "train": "T3"}], "wall_time": 1794624989.384}
+{"type": "step", "decision_id": 22, "commands": [], "tick_after": 56, "score_delta": 0.0, "events": [{"tick": 56, "type": "departure_window_open", "train": "T13"}], "wall_time": 1794625007.277}
+{"type": "step", "decision_id": 23, "commands": [], "tick_after": 59, "score_delta": 0.0, "events": [{"tick": 59, "type": "departure_window_open", "train": "T14"}], "wall_time": 1794625025.182}
+{"type": "step", "decision_id": 24, "commands": [], "tick_after": 64, "score_delta": 0.0, "events": [{"tick": 64, "type": "departure_window_open", "train": "T15"}], "wall_time": 1794625027.564}
+{"type": "step", "decision_id": 25, "commands": [], "tick_after": 65, "score_delta": 0.0, "events": [{"tick": 65, "type": "departure_window_open", "train": "T16"}], "wall_time": 1794625029.429}
+{"type": "step", "decision_id": 26, "commands": [], "tick_after": 70, "score_delta": 0.0, "events": [], "wall_time": 1794625031.356}
+{"type": "step", "decision_id": 27, "commands": [], "tick_after": 74, "score_delta": 0.0, "events": [{"tick": 74, "type": "malfunction_started", "train": "T13", "ticks_remaining": 15}], "wall_time": 1794625033.209}
+{"type": "step", "decision_id": 28, "commands": [], "tick_after": 79, "score_delta": 0.0, "events": [], "wall_time": 1794625034.966}
+{"type": "step", "decision_id": 29, "commands": [], "tick_after": 84, "score_delta": 0.0, "events": [], "wall_time": 1794625037.147}
+{"type": "step", "decision_id": 30, "commands": [], "tick_after": 89, "score_delta": 0.0, "events": [], "wall_time": 1794625038.988}
+{"type": "step", "decision_id": 31, "commands": [], "tick_after": 90, "score_delta": 0.0, "events": [{"tick": 90, "type": "malfunction_ended", "train": "T13"}], "wall_time": 1794625041.756}
+{"type": "step", "decision_id": 32, "commands": [], "tick_after": 92, "score_delta": 0.0, "events": [{"tick": 92, "type": "malfunction_started", "train": "T14", "ticks_remaining": 13}], "wall_time": 1794625043.373}
+{"type": "step", "decision_id": 33, "commands": [], "tick_after": 97, "score_delta": 0.0, "events": [], "wall_time": 1794625045.48}
+{"type": "step", "decision_id": 34, "commands": [], "tick_after": 102, "score_delta": 0.0, "events": [], "wall_time": 1794625047.423}
+{"type": "step", "decision_id": 35, "commands": [], "tick_after": 106, "score_delta": 0.0, "events": [{"tick": 106, "type": "malfunction_ended", "train": "T14"}], "wall_time": 1794625049.132}
+{"type": "step", "decision_id": 36, "commands": [], "tick_after": 111, "score_delta": 0.0, "events": [], "wall_time": 1794625052.322}
+{"type": "step", "decision_id": 37, "commands": [], "tick_after": 116, "score_delta": 0.0, "events": [], "wall_time": 1794625053.926}
+{"type": "step", "decision_id": 38, "commands": [], "tick_after": 121, "score_delta": 0.0, "events": [], "wall_time": 1794625056.336}
+{"type": "step", "decision_id": 39, "commands": [], "tick_after": 126, "score_delta": 0.0, "events": [], "wall_time": 1794625058.072}
+{"type": "step", "decision_id": 40, "commands": [], "tick_after": 131, "score_delta": 0.0, "events": [], "wall_time": 1794625059.84}
+{"type": "step", "decision_id": 41, "commands": [], "tick_after": 136, "score_delta": 0.0, "events": [], "wall_time": 1794625063.371}
+{"type": "step", "decision_id": 42, "commands": [], "tick_after": 141, "score_delta": 0.0, "events": [], "wall_time": 1794625065.705}
+{"type": "step", "decision_id": 43, "commands": [], "tick_after": 146, "score_delta": 0.0, "events": [], "wall_time": 1794625068.501}
+{"type": "step", "decision_id": 44, "commands": [], "tick_after": 151, "score_delta": 0.0, "events": [], "wall_time": 1794625070.519}
+{"type": "step", "decision_id": 45, "commands": [], "tick_after": 156, "score_delta": 0.0, "events": [], "wall_time": 1794625072.354}
+{"type": "step", "decision_id": 46, "commands": [], "tick_after": 161, "score_delta": 0.0, "events": [], "wall_time": 1794625076.015}
+{"type": "step", "decision_id": 47, "commands": [], "tick_after": 166, "score_delta": 0.0, "events": [], "wall_time": 1794625077.998}
+{"type": "step", "decision_id": 48, "commands": [], "tick_after": 171, "score_delta": 0.0, "events": [], "wall_time": 1794625080.74}
+{"type": "step", "decision_id": 49, "commands": [], "tick_after": 176, "score_delta": 0.0, "events": [], "wall_time": 1794625082.863}
+{"type": "step", "decision_id": 50, "commands": [], "tick_after": 181, "score_delta": 0.0, "events": [], "wall_time": 1794625085.073}
+{"type": "step", "decision_id": 51, "commands": [], "tick_after": 186, "score_delta": 0.0, "events": [], "wall_time": 1794625087.156}
+{"type": "step", "decision_id": 52, "commands": [], "tick_after": 191, "score_delta": 0.0, "events": [], "wall_time": 1794625088.913}
+{"type": "step", "decision_id": 53, "commands": [], "tick_after": 196, "score_delta": 0.0, "events": [], "wall_time": 1794625090.533}
+{"type": "step", "decision_id": 54, "commands": [], "tick_after": 201, "score_delta": 0.0, "events": [], "wall_time": 1794625092.551}
+{"type": "step", "decision_id": 55, "commands": [], "tick_after": 206, "score_delta": 0.0, "events": [], "wall_time": 1794625094.044}
+{"type": "step", "decision_id": 56, "commands": [], "tick_after": 211, "score_delta": 0.0, "events": [], "wall_time": 1794625096.049}
+{"type": "step", "decision_id": 57, "commands": [], "tick_after": 216, "score_delta": 0.0, "events": [], "wall_time": 1794625097.937}
+{"type": "step", "decision_id": 58, "commands": [], "tick_after": 221, "score_delta": 0.0, "events": [], "wall_time": 1794625099.819}
+{"type": "step", "decision_id": 59, "commands": [], "tick_after": 226, "score_delta": 0.0, "events": [], "wall_time": 1794625102.178}
+{"type": "step", "decision_id": 60, "commands": [], "tick_after": 231, "score_delta": 0.0, "events": [], "wall_time": 1794625105.781}
+{"type": "step", "decision_id": 61, "commands": [], "tick_after": 236, "score_delta": 0.0, "events": [], "wall_time": 1794625107.405}
+{"type": "step", "decision_id": 62, "commands": [], "tick_after": 241, "score_delta": 0.0, "events": [], "wall_time": 1794625109.392}
+{"type": "step", "decision_id": 63, "commands": [], "tick_after": 246, "score_delta": 0.0, "events": [], "wall_time": 1794625111.126}
+{"type": "step", "decision_id": 64, "commands": [], "tick_after": 251, "score_delta": 0.0, "events": [], "wall_time": 1794625114.486}
+{"type": "step", "decision_id": 65, "commands": [], "tick_after": 256, "score_delta": 0.0, "events": [], "wall_time": 1794625116.632}
+{"type": "step", "decision_id": 66, "commands": [], "tick_after": 261, "score_delta": 0.0, "events": [], "wall_time": 1794625118.578}
+{"type": "step", "decision_id": 67, "commands": [], "tick_after": 266, "score_delta": 0.0, "events": [], "wall_time": 1794625120.514}
+{"type": "step", "decision_id": 68, "commands": [], "tick_after": 271, "score_delta": 0.0, "events": [], "wall_time": 1794625123.576}
+{"type": "step", "decision_id": 69, "commands": [], "tick_after": 276, "score_delta": 0.0, "events": [], "wall_time": 1794625125.812}
+{"type": "step", "decision_id": 70, "commands": [], "tick_after": 281, "score_delta": 0.0, "events": [], "wall_time": 1794625130.973}
+{"type": "step", "decision_id": 71, "commands": [], "tick_after": 286, "score_delta": 0.0, "events": [], "wall_time": 1794625132.88}
+{"type": "step", "decision_id": 72, "commands": [], "tick_after": 291, "score_delta": 0.0, "events": [], "wall_time": 1794625134.972}
+{"type": "step", "decision_id": 73, "commands": [], "tick_after": 296, "score_delta": 0.0, "events": [], "wall_time": 1794625137.079}
+{"type": "step", "decision_id": 74, "commands": [], "tick_after": 301, "score_delta": 0.0, "events": [], "wall_time": 1794625140.257}
+{"type": "step", "decision_id": 75, "commands": [], "tick_after": 306, "score_delta": 0.0, "events": [], "wall_time": 1794625142.25}
+{"type": "step", "decision_id": 76, "commands": [], "tick_after": 311, "score_delta": 0.0, "events": [], "wall_time": 1794625144.535}
+{"type": "step", "decision_id": 77, "commands": [], "tick_after": 316, "score_delta": 0.0, "events": [], "wall_time": 1794625146.846}
+{"type": "step", "decision_id": 78, "commands": [], "tick_after": 321, "score_delta": 0.0, "events": [], "wall_time": 1794625148.82}
+{"type": "step", "decision_id": 79, "commands": [], "tick_after": 326, "score_delta": 0.0, "events": [], "wall_time": 1794625152.529}
+{"type": "step", "decision_id": 80, "commands": [], "tick_after": 331, "score_delta": 0.0, "events": [], "wall_time": 1794625154.628}
+{"type": "step", "decision_id": 81, "commands": [], "tick_after": 336, "score_delta": 0.0, "events": [], "wall_time": 1794625156.87}
+{"type": "step", "decision_id": 82, "commands": [], "tick_after": 341, "score_delta": 0.0, "events": [], "wall_time": 1794625159.14}
+{"type": "step", "decision_id": 83, "commands": [], "tick_after": 346, "score_delta": 0.0, "events": [], "wall_time": 1794625161.154}
+{"type": "step", "decision_id": 84, "commands": [], "tick_after": 351, "score_delta": 0.0, "events": [], "wall_time": 1794625162.873}
+{"type": "step", "decision_id": 85, "commands": [], "tick_after": 356, "score_delta": 0.0, "events": [], "wall_time": 1794625165.087}
+{"type": "step", "decision_id": 86, "commands": [], "tick_after": 361, "score_delta": 0.0, "events": [], "wall_time": 1794625167.903}
+{"type": "step", "decision_id": 87, "commands": [], "tick_after": 366, "score_delta": 0.0, "events": [], "wall_time": 1794625170.755}
+{"type": "step", "decision_id": 88, "commands": [], "tick_after": 371, "score_delta": 0.0, "events": [], "wall_time": 1794625172.903}
+{"type": "step", "decision_id": 89, "commands": [], "tick_after": 376, "score_delta": 0.0, "events": [], "wall_time": 1794625176.499}
+{"type": "step", "decision_id": 90, "commands": [], "tick_after": 381, "score_delta": 0.0, "events": [], "wall_time": 1794625210.462}
+{"type": "step", "decision_id": 91, "commands": [], "tick_after": 386, "score_delta": 0.0, "events": [], "wall_time": 1794625212.653}
+{"type": "step", "decision_id": 92, "commands": [], "tick_after": 391, "score_delta": 0.0, "events": [], "wall_time": 1794625215.218}
+{"type": "step", "decision_id": 93, "commands": [], "tick_after": 396, "score_delta": 0.0, "events": [], "wall_time": 1794625217.588}
+{"type": "step", "decision_id": 94, "commands": [], "tick_after": 401, "score_delta": 0.0, "events": [], "wall_time": 1794625220.101}
+{"type": "step", "decision_id": 95, "commands": [], "tick_after": 406, "score_delta": 0.0, "events": [], "wall_time": 1794625222.968}
+{"type": "step", "decision_id": 96, "commands": [], "tick_after": 411, "score_delta": 0.0, "events": [], "wall_time": 1794625225.51}
+{"type": "step", "decision_id": 97, "commands": [], "tick_after": 416, "score_delta": 0.0, "events": [], "wall_time": 1794625228.355}
+{"type": "step", "decision_id": 98, "commands": [], "tick_after": 421, "score_delta": 0.0, "events": [], "wall_time": 1794625230.486}
+{"type": "step", "decision_id": 99, "commands": [], "tick_after": 426, "score_delta": 0.0, "events": [], "wall_time": 1794625232.701}
+{"type": "step", "decision_id": 100, "commands": [], "tick_after": 431, "score_delta": 0.0, "events": [], "wall_time": 1794625235.05}
+{"type": "step", "decision_id": 101, "commands": [], "tick_after": 436, "score_delta": 0.0, "events": [], "wall_time": 1794625237.654}
+{"type": "step", "decision_id": 102, "commands": [], "tick_after": 441, "score_delta": 0.0, "events": [], "wall_time": 1794625239.958}
+{"type": "step", "decision_id": 103, "commands": [], "tick_after": 446, "score_delta": 0.0, "events": [], "wall_time": 1794625242.622}
+{"type": "step", "decision_id": 104, "commands": [], "tick_after": 451, "score_delta": 0.0, "events": [], "wall_time": 1794625244.592}
+{"type": "step", "decision_id": 105, "commands": [], "tick_after": 456, "score_delta": 0.0, "events": [], "wall_time": 1794625246.987}
+{"type": "step", "decision_id": 106, "commands": [], "tick_after": 461, "score_delta": 0.0, "events": [], "wall_time": 1794625249.263}
+{"type": "step", "decision_id": 107, "commands": [], "tick_after": 466, "score_delta": 0.0, "events": [], "wall_time": 1794625268.98}
+{"type": "step", "decision_id": 108, "commands": [], "tick_after": 471, "score_delta": 0.0, "events": [], "wall_time": 1794625271.29}
+{"type": "step", "decision_id": 109, "commands": [], "tick_after": 476, "score_delta": 0.0, "events": [], "wall_time": 1794625274.212}
+{"type": "step", "decision_id": 110, "commands": [], "tick_after": 481, "score_delta": 0.0, "events": [], "wall_time": 1794625276.499}
+{"type": "step", "decision_id": 111, "commands": [], "tick_after": 486, "score_delta": 0.0, "events": [], "wall_time": 1794625278.589}
+{"type": "step", "decision_id": 112, "commands": [], "tick_after": 491, "score_delta": 0.0, "events": [], "wall_time": 1794625280.868}
+{"type": "step", "decision_id": 113, "commands": [], "tick_after": 496, "score_delta": 0.0, "events": [], "wall_time": 1794625283.722}
+{"type": "step", "decision_id": 114, "commands": [], "tick_after": 501, "score_delta": 0.0, "events": [], "wall_time": 1794625285.879}
+{"type": "step", "decision_id": 115, "commands": [], "tick_after": 506, "score_delta": 0.0, "events": [], "wall_time": 1794625288.453}
+{"type": "step", "decision_id": 116, "commands": [], "tick_after": 511, "score_delta": 0.0, "events": [], "wall_time": 1794625290.456}
+{"type": "step", "decision_id": 117, "commands": [], "tick_after": 516, "score_delta": 0.0, "events": [], "wall_time": 1794625292.724}
+{"type": "step", "decision_id": 118, "commands": [], "tick_after": 521, "score_delta": 0.0, "events": [], "wall_time": 1794625295.197}
+{"type": "step", "decision_id": 119, "commands": [], "tick_after": 526, "score_delta": 0.0, "events": [], "wall_time": 1794625297.439}
+{"type": "step", "decision_id": 120, "commands": [], "tick_after": 531, "score_delta": 0.0, "events": [], "wall_time": 1794625300.46}
+{"type": "step", "decision_id": 121, "commands": [], "tick_after": 536, "score_delta": 0.0, "events": [], "wall_time": 1794625334.859}
+{"type": "step", "decision_id": 122, "commands": [], "tick_after": 541, "score_delta": 0.0, "events": [], "wall_time": 1794625336.785}
+{"type": "step", "decision_id": 123, "commands": [], "tick_after": 546, "score_delta": 0.0, "events": [], "wall_time": 1794625339.073}
+{"type": "step", "decision_id": 124, "commands": [], "tick_after": 551, "score_delta": 0.0, "events": [], "wall_time": 1794625341.083}
+{"type": "step", "decision_id": 125, "commands": [], "tick_after": 556, "score_delta": 0.0, "events": [], "wall_time": 1794625343.797}
+{"type": "step", "decision_id": 126, "commands": [], "tick_after": 561, "score_delta": 0.0, "events": [], "wall_time": 1794625346.356}
+{"type": "step", "decision_id": 127, "commands": [], "tick_after": 566, "score_delta": 0.0, "events": [], "wall_time": 1794625348.455}
+{"type": "step", "decision_id": 128, "commands": [], "tick_after": 571, "score_delta": 0.0, "events": [], "wall_time": 1794625351.329}
+{"type": "step", "decision_id": 129, "commands": [], "tick_after": 576, "score_delta": 0.0, "events": [], "wall_time": 1794625353.503}
+{"type": "step", "decision_id": 130, "commands": [], "tick_after": 581, "score_delta": 0.0, "events": [], "wall_time": 1794625356.064}
+{"type": "step", "decision_id": 131, "commands": [], "tick_after": 586, "score_delta": 0.0, "events": [], "wall_time": 1794625358.473}
+{"type": "step", "decision_id": 132, "commands": [], "tick_after": 591, "score_delta": 0.0, "events": [], "wall_time": 1794625360.551}
+{"type": "step", "decision_id": 133, "commands": [], "tick_after": 596, "score_delta": 0.0, "events": [], "wall_time": 1794625362.752}
+{"type": "step", "decision_id": 134, "commands": [], "tick_after": 601, "score_delta": 0.0, "events": [], "wall_time": 1794625364.97}
+{"type": "step", "decision_id": 135, "commands": [], "tick_after": 606, "score_delta": 0.0, "events": [], "wall_time": 1794625367.845}
+{"type": "step", "decision_id": 136, "commands": [], "tick_after": 611, "score_delta": 0.0, "events": [], "wall_time": 1794625369.836}
+{"type": "step", "decision_id": 137, "commands": [], "tick_after": 616, "score_delta": 0.0, "events": [], "wall_time": 1794625373.246}
+{"type": "step", "decision_id": 138, "commands": [], "tick_after": 621, "score_delta": 0.0, "events": [], "wall_time": 1794625383.757}
+{"type": "step", "decision_id": 139, "commands": [], "tick_after": 626, "score_delta": 0.0, "events": [], "wall_time": 1794625386.104}
+{"type": "step", "decision_id": 140, "commands": [], "tick_after": 631, "score_delta": 0.0, "events": [], "wall_time": 1794625388.158}
+{"type": "step", "decision_id": 141, "commands": [], "tick_after": 636, "score_delta": 0.0, "events": [], "wall_time": 1794625390.889}
+{"type": "step", "decision_id": 142, "commands": [], "tick_after": 641, "score_delta": 0.0, "events": [], "wall_time": 1794625392.781}
+{"type": "step", "decision_id": 143, "commands": [], "tick_after": 646, "score_delta": 0.0, "events": [], "wall_time": 1794625396.032}
+{"type": "step", "decision_id": 144, "commands": [], "tick_after": 651, "score_delta": 0.0, "events": [], "wall_time": 1794625398.752}
+{"type": "step", "decision_id": 145, "commands": [], "tick_after": 656, "score_delta": 0.0, "events": [], "wall_time": 1794625401.854}
+{"type": "step", "decision_id": 146, "commands": [], "tick_after": 661, "score_delta": 0.0, "events": [], "wall_time": 1794625404.238}
+{"type": "step", "decision_id": 147, "commands": [], "tick_after": 666, "score_delta": 0.0, "events": [], "wall_time": 1794625406.825}
+{"type": "step", "decision_id": 148, "commands": [], "tick_after": 671, "score_delta": 0.0, "events": [], "wall_time": 1794625409.087}
+{"type": "step", "decision_id": 149, "commands": [], "tick_after": 676, "score_delta": 0.0, "events": [], "wall_time": 1794625411.552}
+{"type": "step", "decision_id": 150, "commands": [], "tick_after": 681, "score_delta": 0.0, "events": [], "wall_time": 1794625413.966}
+{"type": "step", "decision_id": 151, "commands": [], "tick_after": 686, "score_delta": 0.0, "events": [], "wall_time": 1794625416.216}
+{"type": "step", "decision_id": 152, "commands": [], "tick_after": 691, "score_delta": 0.0, "events": [], "wall_time": 1794625419.989}
+{"type": "step", "decision_id": 153, "commands": [], "tick_after": 696, "score_delta": 0.0, "events": [], "wall_time": 1794625422.687}
+{"type": "step", "decision_id": 154, "commands": [], "tick_after": 701, "score_delta": 0.0, "events": [], "wall_time": 1794625424.938}
+{"type": "step", "decision_id": 155, "commands": [], "tick_after": 706, "score_delta": 0.0, "events": [], "wall_time": 1794625427.913}
+{"type": "step", "decision_id": 156, "commands": [], "tick_after": 711, "score_delta": 0.0, "events": [], "wall_time": 1794625430.501}

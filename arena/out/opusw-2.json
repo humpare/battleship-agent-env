@@ -1,0 +1,106 @@
+{
+ "scenario": "arena-8732",
+ "score": 0.055556,
+ "margin": -0.8889,
+ "enemy_cells_left": 8,
+ "winner": "opponent",
+ "won": false,
+ "finished": true,
+ "enemy_cells_hit": 1,
+ "own_cells_left": 0,
+ "your_shots": 11,
+ "opponent_shots": 18,
+ "opponent": "exact",
+ "board": 6,
+ "actions": [
+  {
+   "type": "place",
+   "ships": [
+    [
+     "C2",
+     "D2",
+     "E2"
+    ],
+    [
+     "E4",
+     "F4"
+    ],
+    [
+     "B6",
+     "C6"
+    ],
+    [
+     "A2"
+    ],
+    [
+     "B4"
+    ]
+   ]
+  },
+  {
+   "type": "fire",
+   "target": "C2"
+  },
+  {
+   "type": "fire",
+   "target": "E3"
+  },
+  {
+   "type": "fire",
+   "target": "A4"
+  },
+  {
+   "type": "fire",
+   "target": "F5"
+  },
+  {
+   "type": "fire",
+   "target": "B6"
+  },
+  {
+   "type": "fire",
+   "target": "D4"
+  },
+  {
+   "type": "fire",
+   "target": "A1"
+  },
+  {
+   "type": "fire",
+   "target": "C5"
+  },
+  {
+   "type": "fire",
+   "target": "D5"
+  },
+  {
+   "type": "fire",
+   "target": "B5"
+  },
+  {
+   "type": "fire",
+   "target": "C4"
+  }
+ ],
+ "opponent_fleet": [
+  [
+   "A6",
+   "E6",
+   "F6"
+  ],
+  [
+   "B2",
+   "B3"
+  ],
+  [
+   "E4"
+  ],
+  [
+   "F2"
+  ],
+  [
+   "C5",
+   "C6"
+  ]
+ ]
+}

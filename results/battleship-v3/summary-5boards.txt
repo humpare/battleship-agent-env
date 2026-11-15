@@ -1,0 +1,21 @@
+                                                reference               nothing            stop-early                  kimi
+boards                                                  5                     5                     5                     5
+runs                                                    5                     5                     5                    15
+errors                                                  0                     0                     0                     0
+mean_score                                          0.989                   0.0                 0.144                 0.467
+ci95                                         [0.967, 1.0]            [0.0, 0.0]        [0.122, 0.167]        [0.378, 0.556]
+wins                                                    5                     0                     0                     5
+finished                                                5                     0                     0                    14
+shot_quality                                        0.998                  None                   1.0                  0.91
+shot_quality_over_100_fleets_left                     1.0                  None                   1.0                 0.869
+shot_quality_100_or_fewer_left                      0.997                  None                   1.0                 0.945
+shots_at_under_5pct_cells                             0.0                  None                   0.0                   0.0
+shots_at_certain_water                                0.0                  None                   0.0                   0.0
+first_shot                                      {"A1": 5}                    {}             {"A1": 5}   {"C3": 14, "A1": 1}
+distinct_fleets                                         1                     0                     1                     5
+most_common_fleet_runs                                  5                     0                     5                    11
+fleets_with_a_ship_on_A1                                0                     0                     0                    15
+refused_requests                                        0                     0                     0                     0
+gap reference - nothing: 0.989 [95% 0.967, 1.000] on 5 shared boards; nothing ahead on 0 boards
+gap reference - stop-early: 0.844 [95% 0.833, 0.867] on 5 shared boards; stop-early ahead on 0 boards
+gap reference - kimi: 0.522 [95% 0.433, 0.619] on 5 shared boards; kimi ahead on 0 boards

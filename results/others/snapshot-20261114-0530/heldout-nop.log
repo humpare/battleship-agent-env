@@ -1,0 +1,20 @@
+  12/12 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:01:46 0:00:00
+heldout • nop
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│     12 │          0 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━┳━━━━━━━┓
+┃ Reward ┃ Count ┃
+┡━━━━━━━━╇━━━━━━━┩
+│ 0.0    │    12 │
+└────────┴───────┘
+
+Job Info
+Total runtime: 1m 46s
+Results written to runs/jobs/heldout-nop/result.json
+Inspect results by running `harbor view runs/jobs`
+Share results by running `harbor upload runs/jobs/heldout-nop`
+

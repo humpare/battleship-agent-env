@@ -1,0 +1,11 @@
+{"type": "header", "scenario": "bs5-s108", "scenario_hash": "b3ab69e828036c1e", "wall_time": 1794721888.068}
+{"type": "place", "ships": [["B2"], ["D1"], ["E3", "E4", "E5"], ["A4", "A5"], ["C4", "C5"]], "wall_time": 1794722059.743}
+{"type": "fire", "target": "A1", "your_shot": {"cell": "A1", "result": "hit"}, "opponent_shots": [], "score_after": 0.055556, "wall_time": 1794722062.512}
+{"type": "fire", "target": "B1", "your_shot": {"cell": "B1", "result": "miss"}, "opponent_shots": [{"cell": "A1", "result": "miss"}], "score_after": 0.055556, "wall_time": 1794722066.181}
+{"type": "fire", "target": "A2", "your_shot": {"cell": "A2", "result": "sunk", "ship_length": 2}, "opponent_shots": [], "score_after": 0.111111, "wall_time": 1794722067.515}
+{"type": "fire", "target": "E1", "your_shot": {"cell": "E1", "result": "hit"}, "opponent_shots": [], "score_after": 0.166667, "wall_time": 1794722073.968}
+{"type": "fire", "target": "D1", "your_shot": {"cell": "D1", "result": "hit"}, "opponent_shots": [], "score_after": 0.222222, "wall_time": 1794722077.869}
+{"type": "fire", "target": "C1", "your_shot": {"cell": "C1", "result": "sunk", "ship_length": 3}, "opponent_shots": [], "score_after": 0.277778, "wall_time": 1794722079.736}
+{"type": "fire", "target": "E5", "your_shot": {"cell": "E5", "result": "miss"}, "opponent_shots": [{"cell": "E5", "result": "hit"}, {"cell": "E1", "result": "miss"}], "score_after": 0.277778, "wall_time": 1794722158.972}
+{"type": "fire", "target": "A5", "your_shot": {"cell": "A5", "result": "miss"}, "opponent_shots": [{"cell": "A5", "result": "hit"}, {"cell": "A4", "result": "sunk", "ship_length": 2}, {"cell": "C5", "result": "hit"}, {"cell": "D5", "result": "miss"}], "score_after": 0.277778, "wall_time": 1794722194.472}
+{"type": "fire", "target": "E3", "your_shot": {"cell": "E3", "result": "miss"}, "opponent_shots": [{"cell": "C4", "result": "sunk", "ship_length": 2}, {"cell": "E3", "result": "hit"}, {"cell": "E4", "result": "sunk", "ship_length": 3}, {"cell": "D1", "result": "sunk", "ship_length": 1}, {"cell": "B2", "result": "sunk", "ship_length": 1}], "score_after": 0.277778, "wall_time": 1794722209.742}

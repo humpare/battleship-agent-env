@@ -1,0 +1,124 @@
+{
+    "schema_version": 1,
+    "id": "23b6d856-cc58-4669-9718-c01bb8acd466",
+    "task_name": "seafight/duel5-exact-s5",
+    "trial_name": "duel5-exact-s5__wnwT5tY",
+    "trial_uri": "file://runs/jobs/final5-nothing/duel5-exact-s5__wnwT5tY",
+    "task_id": {
+        "path": "tasks/duel5/duel5-exact-s5"
+    },
+    "source": "duel5",
+    "task_checksum": "1095b3bd9b33cff7248777e7c576410aa6e328d890ccabcf6afdd1c0aa6b0aea",
+    "config": {
+        "schema_version": 1,
+        "task": {
+            "path": "tasks/duel5/duel5-exact-s5",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "duel5"
+        },
+        "trial_name": "duel5-exact-s5__wnwT5tY",
+        "trials_dir": "runs/jobs/final5-nothing",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "nop",
+            "import_path": null,
+            "model_name": null,
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "override_error_policy": {},
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "f8402db4-34a1-47aa-8d3f-89140bc81321",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "nop",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-11-14T06:02:53.457503Z",
+    "finished_at": "2026-11-14T06:03:26.833596Z",
+    "environment_setup": {
+        "started_at": "2026-11-14T06:02:53.462863Z",
+        "finished_at": "2026-11-14T06:03:00.438983Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-11-14T06:03:00.439005Z",
+        "finished_at": "2026-11-14T06:03:00.439042Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-11-14T06:03:00.439102Z",
+        "finished_at": "2026-11-14T06:03:00.439315Z"
+    },
+    "verifier": {
+        "started_at": "2026-11-14T06:03:11.605152Z",
+        "finished_at": "2026-11-14T06:03:26.833587Z"
+    },
+    "step_results": null,
+    "reward_valid": true
+}

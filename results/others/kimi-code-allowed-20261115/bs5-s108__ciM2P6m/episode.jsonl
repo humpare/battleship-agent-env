@@ -1,0 +1,14 @@
+{"type": "header", "scenario": "bs5-s108", "scenario_hash": "b3ab69e828036c1e", "wall_time": 1794717165.406}
+{"type": "place", "ships": [["B1", "C1", "D1"], ["A3", "B3"], ["D3", "E3"], ["B5"], ["D5"]], "wall_time": 1794717290.776}
+{"type": "fire", "target": "A1", "your_shot": {"cell": "A1", "result": "hit"}, "opponent_shots": [], "score_after": 0.055556, "wall_time": 1794717292.668}
+{"type": "fire", "target": "E1", "your_shot": {"cell": "E1", "result": "hit"}, "opponent_shots": [], "score_after": 0.111111, "wall_time": 1794717345.847}
+{"type": "fire", "target": "A2", "your_shot": {"cell": "A2", "result": "sunk", "ship_length": 2}, "opponent_shots": [], "score_after": 0.166667, "wall_time": 1794717350.629}
+{"type": "fire", "target": "C1", "your_shot": {"cell": "C1", "result": "hit"}, "opponent_shots": [], "score_after": 0.222222, "wall_time": 1794717355.562}
+{"type": "fire", "target": "D1", "your_shot": {"cell": "D1", "result": "sunk", "ship_length": 3}, "opponent_shots": [], "score_after": 0.277778, "wall_time": 1794717357.384}
+{"type": "fire", "target": "E5", "your_shot": {"cell": "E5", "result": "miss"}, "opponent_shots": [{"cell": "A1", "result": "miss"}], "score_after": 0.277778, "wall_time": 1794717362.047}
+{"type": "fire", "target": "A5", "your_shot": {"cell": "A5", "result": "miss"}, "opponent_shots": [{"cell": "E5", "result": "miss"}], "score_after": 0.277778, "wall_time": 1794717366.503}
+{"type": "fire", "target": "E3", "your_shot": {"cell": "E3", "result": "miss"}, "opponent_shots": [{"cell": "E1", "result": "miss"}], "score_after": 0.277778, "wall_time": 1794717373.675}
+{"type": "fire", "target": "A4", "your_shot": {"cell": "A4", "result": "sunk", "ship_length": 1}, "opponent_shots": [], "score_after": 0.333333, "wall_time": 1794717379.22}
+{"type": "fire", "target": "C5", "your_shot": {"cell": "C5", "result": "sunk", "ship_length": 1}, "opponent_shots": [], "score_after": 0.388889, "wall_time": 1794717383.844}
+{"type": "fire", "target": "C3", "your_shot": {"cell": "C3", "result": "hit"}, "opponent_shots": [], "score_after": 0.444444, "wall_time": 1794717387.64}
+{"type": "fire", "target": "D3", "your_shot": {"cell": "D3", "result": "sunk", "ship_length": 2}, "opponent_shots": [], "score_after": 1.0, "wall_time": 1794717389.023}

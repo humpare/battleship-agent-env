@@ -1,0 +1,334 @@
+{
+    "schema_version": 3,
+    "created_at": "2026-11-14T06:03:32.040465Z",
+    "harbor": {
+        "version": "0.26.0",
+        "is_editable": false
+    },
+    "n_concurrent_trials": 2,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "APIResponseValidationError",
+            "AgentAuthenticationError",
+            "AgentSafetyRefusalError",
+            "AgentTimeoutError",
+            "ApiProviderResourceNotFoundError",
+            "AuthenticationError",
+            "BadRequestError",
+            "BudgetExceededError",
+            "CancelledError",
+            "ContentPolicyViolationError",
+            "ContextLengthExceededError",
+            "ContextWindowExceededError",
+            "DspyImportError",
+            "MissingExtraError",
+            "ModelNotFoundError",
+            "NonZeroAgentExitCodeError",
+            "NotFoundError",
+            "OutputLengthExceededError",
+            "OutputTokenExceededError",
+            "PermissionDeniedError",
+            "RegradeError",
+            "RewardFileEmptyError",
+            "RewardFileNotFoundError",
+            "ServiceOperationsUnsupportedError",
+            "UnprocessableEntityError",
+            "UnsupportedModelParametersError",
+            "UnsupportedParamsError",
+            "VercelScopeError",
+            "VerifierOutputParseError",
+            "VerifierTimeoutError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "duel5-exact-s1",
+                "type": "local",
+                "digest": "sha256:b1aad6e7466e8782501d5e2ebd5903e99e4c9b3e018ae4010552e36dfb2dda54",
+                "source": "duel5",
+                "path": "tasks/duel5/duel5-exact-s1"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "opencode",
+                "model_name": "verda/kimi-k3-1-pro",
+                "model_api_key_name": "VERDA_API_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "opencode_config": {
+                        "provider": {
+                            "verda": {
+                                "npm": "@ai-sdk/openai-compatible",
+                                "options": {
+                                    "baseURL": "https://inference.verda.com/v1",
+                                    "apiKey": "{env:VERDA_API_KEY}"
+                                },
+                                "models": {
+                                    "kimi-k3-1-pro": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "separate"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "duel5-exact-s2",
+                "type": "local",
+                "digest": "sha256:69fac7b58e7539c44e3255ddc5f964e2de025c14fca941fe69aeeb4d02e23dce",
+                "source": "duel5",
+                "path": "tasks/duel5/duel5-exact-s2"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "opencode",
+                "model_name": "verda/kimi-k3-1-pro",
+                "model_api_key_name": "VERDA_API_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "opencode_config": {
+                        "provider": {
+                            "verda": {
+                                "npm": "@ai-sdk/openai-compatible",
+                                "options": {
+                                    "baseURL": "https://inference.verda.com/v1",
+                                    "apiKey": "{env:VERDA_API_KEY}"
+                                },
+                                "models": {
+                                    "kimi-k3-1-pro": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "separate"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "duel5-exact-s3",
+                "type": "local",
+                "digest": "sha256:fc693b92a768ff3f35b788eda8f7ed393eebefc568ce529e9dd35611711eee73",
+                "source": "duel5",
+                "path": "tasks/duel5/duel5-exact-s3"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "opencode",
+                "model_name": "verda/kimi-k3-1-pro",
+                "model_api_key_name": "VERDA_API_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "opencode_config": {
+                        "provider": {
+                            "verda": {
+                                "npm": "@ai-sdk/openai-compatible",
+                                "options": {
+                                    "baseURL": "https://inference.verda.com/v1",
+                                    "apiKey": "{env:VERDA_API_KEY}"
+                                },
+                                "models": {
+                                    "kimi-k3-1-pro": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "separate"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "duel5-exact-s4",
+                "type": "local",
+                "digest": "sha256:c9f743418235b05d9a7e79a967b49679b0d6144963fa0666692e439679396905",
+                "source": "duel5",
+                "path": "tasks/duel5/duel5-exact-s4"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "opencode",
+                "model_name": "verda/kimi-k3-1-pro",
+                "model_api_key_name": "VERDA_API_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "opencode_config": {
+                        "provider": {
+                            "verda": {
+                                "npm": "@ai-sdk/openai-compatible",
+                                "options": {
+                                    "baseURL": "https://inference.verda.com/v1",
+                                    "apiKey": "{env:VERDA_API_KEY}"
+                                },
+                                "models": {
+                                    "kimi-k3-1-pro": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "separate"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "duel5-exact-s5",
+                "type": "local",
+                "digest": "sha256:923db99760ffb41c80e0f0da150120e54f88b4b78ad4dc887558b7ff4306ecd1",
+                "source": "duel5",
+                "path": "tasks/duel5/duel5-exact-s5"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "opencode",
+                "model_name": "verda/kimi-k3-1-pro",
+                "model_api_key_name": "VERDA_API_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "opencode_config": {
+                        "provider": {
+                            "verda": {
+                                "npm": "@ai-sdk/openai-compatible",
+                                "options": {
+                                    "baseURL": "https://inference.verda.com/v1",
+                                    "apiKey": "{env:VERDA_API_KEY}"
+                                },
+                                "models": {
+                                    "kimi-k3-1-pro": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "separate"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        }
+    ]
+}

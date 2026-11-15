@@ -1,0 +1,1 @@
+{"id": "duel5-exact-s3", "seed": 3, "board": 5, "fleet": [3, 2, 2, 1, 1], "opponent": "exact", "opponent_fleet": [["C1", "C2", "C3"], ["A2", "A3"], ["A5", "B5"], ["E5"], ["E2"]], "opponent_shot_seed": 23770}

@@ -1,0 +1,35 @@
+Agent 'oracle' does not declare an options_model; leftover kwargs are ignored
+Agent 'oracle' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__c92787fdf837e7f94e5fe43659ae2bf9: docker inspect returned 1
+Skipping image OS validation for hb__e90510d51d1142a04b3619aae472f125: docker inspect returned 1
+Collecting main service artifacts
+Collecting main service artifacts
+Stopping main service before sidecar evidence collection
+Stopping main service before sidecar evidence collection
+Main service stopped
+Collecting sidecar artifacts from services: ['sim']
+Main service stopped
+Collecting sidecar artifacts from services: ['sim']
+Skipping image OS validation for hb__5b6b53f9d6774c4baa0caf58d9564483: docker inspect returned 1
+Skipping image OS validation for hb__4b39538fc37fd0fcc2d3c75dc186ab8c: docker inspect returned 1
+Agent 'oracle' does not declare an options_model; leftover kwargs are ignored
+Agent 'oracle' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__96104bdb4829752d329c60c361f815c5: docker inspect returned 1
+Skipping image OS validation for hb__8ce3cbe9c6e918609dc1712b34e1353e: docker inspect returned 1
+Collecting main service artifacts
+Collecting main service artifacts
+Stopping main service before sidecar evidence collection
+Stopping main service before sidecar evidence collection
+Main service stopped
+Collecting sidecar artifacts from services: ['sim']
+Main service stopped
+Collecting sidecar artifacts from services: ['sim']
+Skipping image OS validation for hb__3e448d5ed1a3f61abe231b861ea8ea8d: docker inspect returned 1
+Skipping image OS validation for hb__2b1bb66c826c037f3c9eecf8c342f443: docker inspect returned 1
+Agent 'oracle' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__f3a7251414ec83c67e24d9126c09ee17: docker inspect returned 1
+Collecting main service artifacts
+Stopping main service before sidecar evidence collection
+Main service stopped
+Collecting sidecar artifacts from services: ['sim']
+Skipping image OS validation for hb__06429c2a7ec3700ba3c132d1a9cae772: docker inspect returned 1

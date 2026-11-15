@@ -1,0 +1,95 @@
+{
+ "scenario": "c-pressure-s101",
+ "scenario_hash": "9ceb93831d07363a",
+ "score": 0.333333,
+ "completed": 2,
+ "trains": 6,
+ "unfinished": 4,
+ "total_lateness": 0,
+ "final_tick": 260,
+ "decisions": 61,
+ "diagnostics": {
+  "blocked_train_ticks": 929,
+  "deadlocked_trains": [
+   "T2",
+   "T3",
+   "T5",
+   "T6"
+  ],
+  "malfunctions_seen": 0
+ },
+ "per_train": [
+  {
+   "train": "T1",
+   "completed": true,
+   "arrival_tick": 40,
+   "deadline": 61,
+   "lateness": 0,
+   "score": 1.0,
+   "departed": true,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T2",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 63,
+   "lateness": null,
+   "score": 0.0,
+   "departed": true,
+   "blocked_ticks": 229
+  },
+  {
+   "train": "T3",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 63,
+   "lateness": null,
+   "score": 0.0,
+   "departed": true,
+   "blocked_ticks": 236
+  },
+  {
+   "train": "T4",
+   "completed": true,
+   "arrival_tick": 43,
+   "deadline": 64,
+   "lateness": 0,
+   "score": 1.0,
+   "departed": true,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T5",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 66,
+   "lateness": null,
+   "score": 0.0,
+   "departed": true,
+   "blocked_ticks": 234
+  },
+  {
+   "train": "T6",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 67,
+   "lateness": null,
+   "score": 0.0,
+   "departed": true,
+   "blocked_ticks": 230
+  }
+ ],
+ "mode": "agent",
+ "turns": 63,
+ "tool_calls": 63,
+ "refused_batches": 0,
+ "wall_seconds": 252.4,
+ "error": null,
+ "model": "kimi-k3-1-pro",
+ "llm_calls": 63,
+ "prompt_tokens": 1614273,
+ "completion_tokens": 10500,
+ "llm_seconds": 252.3,
+ "api_retries": 12
+}

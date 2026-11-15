@@ -1,0 +1,13 @@
+{
+ "scenario": "bs5-s104",
+ "score": 0.944444,
+ "margin": 0.8889,
+ "enemy_cells_left": 0,
+ "winner": "you",
+ "won": true,
+ "finished": true,
+ "enemy_cells_hit": 9,
+ "own_cells_left": 8,
+ "your_shots": 14,
+ "opponent_shots": 6
+}

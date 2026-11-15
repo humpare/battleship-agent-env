@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Battleship replays</title>
+<style>
+:root{--bg:#f7f8fa;--fg:#14181f;--mut:#5b6472;--card:#fff;--line:#dfe3ea;--acc:#1f6feb;--cell:#eef1f6;--ship:#8a94a6;
+--hit:#d9480f;--sunk:#7a1e0a;--good:#1a7f37;--warn:#b35900;--heat:31,111,235}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1319;--fg:#e8ecf2;--mut:#9aa4b2;--card:#171c24;--line:#2a313c;--acc:#6ea8ff;--cell:#1e2530;--ship:#67738a;
+--hit:#ff7a45;--sunk:#c2410c;--good:#4ac26b;--warn:#f0a13c;--heat:110,168,255}}
+:root[data-theme="dark"]{--bg:#0f1319;--fg:#e8ecf2;--mut:#9aa4b2;--card:#171c24;--line:#2a313c;--acc:#6ea8ff;--cell:#1e2530;--ship:#67738a;
+--hit:#ff7a45;--sunk:#c2410c;--good:#4ac26b;--warn:#f0a13c;--heat:110,168,255}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:24px 16px 64px}a{color:var(--acc)}
+h1{font-size:1.6rem;margin:6px 0 4px}p.lead{color:var(--mut);margin:0 0 16px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0}
+select,button{font:inherit;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+button{cursor:pointer}button.primary{background:var(--acc);color:#fff;border-color:var(--acc);min-width:84px}
+select{max-width:100%}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.9rem}
+.chip b{font-variant-numeric:tabular-nums}.chip.bad b{color:var(--hit)}.chip.ok b{color:var(--good)}
+.boards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:760px){.boards{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.panel h2{font-size:1rem;margin:0 0 2px}.panel .sub{color:var(--mut);font-size:.85rem;margin:0 0 10px;min-height:2.5em}
+.grid{display:grid;grid-template-columns:22px repeat(5,1fr);gap:4px;max-width:420px}
+.lab{display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:.8rem}
+.c{position:relative;aspect-ratio:1;border-radius:6px;background:var(--cell);display:flex;flex-direction:column;align-items:center;justify-content:center;font-variant-numeric:tabular-nums;font-size:.8rem;overflow:hidden}
+.c .m{font-size:1.25rem;line-height:1;font-weight:700}.c .p{font-size:.72rem;opacity:.95}
+.c.ship{box-shadow:inset 0 0 0 3px var(--ship)}
+.c.miss .m{color:var(--mut)}.c.hit{background:var(--hit);color:#fff}.c.sunk{background:var(--sunk);color:#fff}
+.c.last{outline:3px solid var(--fg);outline-offset:1px}
+.c.best{outline:3px dashed var(--good);outline-offset:1px}
+.cap{margin:16px 0 6px;padding:12px 14px;border-radius:10px;background:var(--card);border:1px solid var(--line);min-height:3.4em}
+.cap.bad{border-color:var(--warn)}.cap .tag{font-weight:700;margin-right:6px}.cap.bad .tag{color:var(--warn)}.cap.good .tag{color:var(--good)}
+input[type=range]{flex:1;min-width:160px;accent-color:var(--acc)}
+label.ck{display:flex;gap:6px;align-items:center;font-size:.92rem}
+.keys{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+.keys button{font-size:.88rem;padding:5px 10px;border-color:var(--warn)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;color:var(--mut);font-size:.85rem;margin-top:12px}
+.sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:5px}
+small.note{color:var(--mut)}
+</style></head><body><main>
+<a href="./">&larr; Battleship: Break the Agent</a>
+<h1>Game replays with exact hit chances</h1>
+<p class="lead">Recorded games of Kimi K3.1 Pro, the coded reference, Claude Opus 5.5 and Claude Fable 5.2, step by step. Turn on the heat maps to see the chance of a ship in each cell exactly as each side could compute it from what it had seen.</p>
+
+<div class="bar"><label for="game">Game</label><select id="game"></select></div>
+<div class="chips" id="chips"></div>
+
+<div class="boards">
+  <div class="panel"><h2>Opponent's fleet (the agent shoots here)</h2><p class="sub" id="subA"></p><div class="grid" id="gA"></div></div>
+  <div class="panel"><h2>Agent's fleet (the opponent shoots here)</h2><p class="sub" id="subO"></p><div class="grid" id="gO"></div></div>
+</div>
+
+<div class="cap" id="cap"></div>
+
+<div class="bar">
+  <button id="first" title="First step">&#9198;</button><button id="prev" title="Step back">&#9664;</button>
+  <button id="play" class="primary">Play</button>
+  <button id="next" title="Step forward">&#9654;</button>
+  <input type="range" id="sl" min="0" max="1" value="0" aria-label="Step">
+  <span id="pos" style="font-variant-numeric:tabular-nums;min-width:70px"></span>
+  <select id="speed" aria-label="Speed"><option value="1600">Slow</option><option value="900" selected>Normal</option><option value="400">Fast</option></select>
+</div>
+<div class="bar">
+  <label class="ck"><input type="checkbox" id="hA" checked> Agent's view: chance of a ship in each cell</label>
+  <label class="ck"><input type="checkbox" id="hO" checked> Opponent's view: chance of a ship in each of the agent's cells</label>
+  <label class="ck"><input type="checkbox" id="rev"> Reveal the opponent's ships</label>
+</div>
+<div id="keysWrap"><b>Key moments in this game</b> <small class="note">(agent shots that were not at a best cell, worst first)</small><div class="keys" id="keys"></div></div>
+<div class="legend">
+  <span><span class="sw" style="background:rgba(var(--heat),.85)"></span>higher chance of a ship</span>
+  <span><span class="sw" style="background:var(--hit)"></span>hit</span>
+  <span><span class="sw" style="background:var(--sunk)"></span>sunk</span>
+  <span><span class="sw" style="background:var(--cell);box-shadow:inset 0 0 0 3px var(--ship)"></span>ship</span>
+  <span><span class="sw" style="outline:3px solid var(--fg)"></span>this shot</span>
+  <span><span class="sw" style="outline:3px dashed var(--good)"></span>best cell the agent could have shot</span>
+</div>
+<p><small class="note">Chances are exact: the share of all legal fleets still consistent with the shooter's results that have a ship in the cell. They are shown as they stood just before the current shot.</small></p>
+</main>
+<script>
+const $=id=>document.getElementById(id), COLS="ABCDE";
+let D=null,G=null,i=0,timer=null;
+function mk(grid){grid.innerHTML="";grid.appendChild(Object.assign(document.createElement("div"),{className:"lab"}));
+  for(const ch of COLS)grid.appendChild(Object.assign(document.createElement("div"),{className:"lab",textContent:ch}));
+  const cells=[];for(let r=0;r<5;r++){grid.appendChild(Object.assign(document.createElement("div"),{className:"lab",textContent:r+1}));
+    for(let c=0;c<5;c++){const d=document.createElement("div");d.className="c";grid.appendChild(d);cells.push(d)}}return cells}
+const cA=mk($("gA")),cO=mk($("gO"));
+const idx=cell=>(parseInt(cell.slice(1))-1)*5+COLS.indexOf(cell[0]);
+const pct=x=>Math.round(100*x)+"%";
+function paint(el,o){el.className="c"+(o.cls?" "+o.cls:"");el.style.background="";el.style.color="";
+  if(o.heat!=null&&!o.solid){el.style.background=`rgba(var(--heat),${(0.08+0.82*o.heat).toFixed(3)})`;if(o.heat>0.45)el.style.color="#fff"}
+  el.innerHTML=(o.mark?`<span class="m">${o.mark}</span>`:"")+(o.heat!=null?`<span class="p">${pct(o.heat)}</span>`:"")}
+function render(){const f=G.frames[i],prev=G.frames[Math.max(0,i-1)];
+  const hA=$("hA").checked?prev.heat_agent:null,hO=$("hO").checked?prev.heat_opp:null;
+  const enemyShips=new Set(G.enemy_fleet.flat().map(idx)),last=f.cell?idx(f.cell):-1;
+  const best=new Set(f.who==="agent"&&!f.is_best?f.best_cells.map(idx):[]);
+  for(let k=0;k<25;k++){const ch=f.enemy[Math.floor(k/5)][k%5];let o={cls:"",mark:"",heat:null};
+    if(ch==="o"){o.cls="miss";o.mark="&bull;"}else if(ch==="x"){o.cls="hit";o.mark="&times;";o.solid=true}else if(ch==="#"){o.cls="sunk";o.mark="&times;";o.solid=true}
+    if(hA&&hA[k]!=null&&(ch==="."||(f.who==="agent"&&k===last)))o.heat=hA[k];
+    if($("rev").checked&&enemyShips.has(k)&&ch===".")o.cls+=" ship";
+    if(f.who==="agent"&&k===last)o.cls+=" last";if(best.has(k))o.cls+=" best";paint(cA[k],o)}
+  for(let k=0;k<25;k++){const ch=f.mine[Math.floor(k/5)][k%5];let o={cls:"",mark:"",heat:null};
+    if(ch==="S")o.cls="ship";else if(ch==="X"){o.cls="hit";o.mark="&times;";o.solid=true}else if(ch==="o"){o.cls="miss";o.mark="&bull;"}
+    if(hO&&hO[k]!=null&&(ch==="."||ch==="S"||(f.who==="opponent"&&k===last)))o.heat=hO[k];
+    if(f.who==="opponent"&&k===last)o.cls+=" last";paint(cO[k],o)}
+  $("subA").textContent=`${prev.fleets_agent.toLocaleString()} fleets were still possible from the agent's view before this step.`;
+  $("subO").textContent=`${prev.fleets_opp.toLocaleString()} fleets were still possible from the opponent's view before this step.`;
+  const cap=$("cap");let tag="",cls="cap";
+  if(f.who==="agent"){if(f.is_best){tag="Best cell.";cls+=" good"}else{tag="Not the best cell.";cls+=" bad"}}
+  else if(f.who==="opponent")tag="Opponent.";
+  let extra="";if(i===G.frames.length-1&&i>0)extra=` <b>Game over: ${G.won?"the agent won":"the agent "+(G.winner?"lost":"stopped")}, score ${G.score.toFixed(3)}.</b>`;
+  cap.className=cls;cap.innerHTML=(tag?`<span class="tag">${tag}</span>`:"")+f.text+extra+` <small class="note">Score so far: ${f.score.toFixed(3)}</small>`;
+  $("sl").value=i;$("pos").textContent=`${i} / ${G.frames.length-1}`;
+  try{history.replaceState(null,"","#"+$("game").value+"-"+i)}catch(_){}}
+function go(n){i=Math.max(0,Math.min(G.frames.length-1,n));render();if(i===G.frames.length-1)stop()}
+function stop(){clearInterval(timer);timer=null;$("play").textContent="Play"}
+function play(){if(timer){stop();return}if(i>=G.frames.length-1)i=0;$("play").textContent="Pause";render();
+  timer=setInterval(()=>go(i+1),+$("speed").value)}
+function load(n){stop();G=D.games[n];i=0;$("sl").max=G.frames.length-1;
+  const fv=G.fleet_value,ex=JSON.stringify(G.fleet)===JSON.stringify([["A1","A2","A3"],["C1","D1"],["E3","E4"],["A5"],["C5"]]);
+  $("chips").innerHTML=`<span class="chip ${G.won?"ok":"bad"}">Result <b>${G.won?"won":"lost"}</b></span>
+   <span class="chip">Score <b>${G.score.toFixed(3)}</b></span>
+   <span class="chip ${fv.expected_score<0.8?"bad":"ok"}">Fleet's expected score <b>${fv.expected_score.toFixed(2)}</b> (best fleet 0.99, average 0.59)</span>
+   <span class="chip ${G.corner_ships?"bad":"ok"}">Ships on a corner <b>${G.corner_ships}</b></span>
+   <span class="chip ${G.not_best?"bad":"ok"}">Shots not at a best cell <b>${G.not_best} of ${G.shots}</b></span>`+
+   (ex?`<span class="chip bad"><b>Fleet copied from the example in the rules</b></span>`:"")+
+   (G.earlier?`<span class="chip">Earlier version of the task: the rules did not yet describe the opponent, and it broke ties from A1</span>`:"");
+  const k=$("keys");k.innerHTML="";$("keysWrap").style.display=G.mistakes.length?"":"none";
+  for(const m of G.mistakes){const f=G.frames[m],b=document.createElement("button");
+    b.textContent=`Step ${m}: fired ${f.cell} (${pct(f.chance)}) instead of ${f.best_cells[0]} (${pct(f.best)})`;b.onclick=()=>{stop();go(m)};k.appendChild(b)}
+  render()}
+$("play").onclick=play;$("next").onclick=()=>{stop();go(i+1)};$("prev").onclick=()=>{stop();go(i-1)};$("first").onclick=()=>{stop();go(0)};
+$("sl").oninput=e=>{stop();go(+e.target.value)};for(const id of["hA","hO","rev"])$(id).onchange=render;
+$("speed").onchange=()=>{if(timer){stop();play()}};$("game").onchange=e=>{load(+e.target.value)};
+document.addEventListener("keydown",e=>{if(e.target.tagName==="SELECT")return;if(e.key==="ArrowRight"){stop();go(i+1)}else if(e.key==="ArrowLeft"){stop();go(i-1)}else if(e.key===" "){e.preventDefault();play()}});
+fetch("replays.json").then(r=>r.json()).then(d=>{D=d;const s=$("game"),seen={};
+  d.games.forEach((g,n)=>{const key=g.label+g.board;seen[key]=(seen[key]||0)+1;const o=document.createElement("option");o.value=n;
+    o.textContent=(g.earlier?`${g.label}, game ${seen[key]}`:`${g.label}, board ${g.board.replace("bs5-s","")}, run ${seen[key]}`)+`: ${g.won?"won":"lost"}, score ${g.score.toFixed(3)}`;
+    let grp=s.querySelector(`optgroup[label="${g.label}"]`);if(!grp){grp=document.createElement("optgroup");grp.label=g.label;s.appendChild(grp)}grp.appendChild(o)});
+  const [h,st]=location.hash.slice(1).split("-").map(x=>parseInt(x));const n=h>=0&&h<d.games.length?h:0;s.value=n;load(n);if(st>0)go(st)})
+ .catch(e=>{$("cap").textContent="Could not load the replay data: "+e});
+</script></body></html>

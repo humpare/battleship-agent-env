@@ -1,0 +1,149 @@
+{
+    "schema_version": 1,
+    "id": "4c0f36b4-003a-4a35-bf02-8360fa7541d2",
+    "task_name": "seafight/duel5-exact-s1",
+    "trial_name": "duel5-exact-s1__UKuu6VQ",
+    "trial_uri": "file://runs/jobs/final5-kimi-r1/duel5-exact-s1__UKuu6VQ",
+    "task_id": {
+        "path": "tasks/duel5/duel5-exact-s1"
+    },
+    "source": "duel5",
+    "task_checksum": "a8d8bd067c165641a6c8a5e9c3053394c8bd7c2bec072d63b19805456de68052",
+    "config": {
+        "schema_version": 1,
+        "task": {
+            "path": "tasks/duel5/duel5-exact-s1",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "duel5"
+        },
+        "trial_name": "duel5-exact-s1__UKuu6VQ",
+        "trials_dir": "runs/jobs/final5-kimi-r1",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "opencode",
+            "import_path": null,
+            "model_name": "verda/kimi-k3-1-pro",
+            "base_url": null,
+            "model_api_key_name": "VERDA_API_KEY",
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "opencode_config": {
+                    "provider": {
+                        "verda": {
+                            "npm": "@ai-sdk/openai-compatible",
+                            "options": {
+                                "baseURL": "https://inference.verda.com/v1",
+                                "apiKey": "{env:VERDA_API_KEY}"
+                            },
+                            "models": {
+                                "kimi-k3-1-pro": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "override_error_policy": {},
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "0bc6dd19-b6ee-4163-adde-676910b71551",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "opencode",
+        "version": "1.19.5",
+        "model_info": {
+            "name": "verda/kimi-k3-1-pro",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 62620,
+        "n_cache_tokens": 55744,
+        "n_output_tokens": 584,
+        "cost_usd": null,
+        "model_usage": {
+            "verda/kimi-k3-1-pro": {
+                "n_input_tokens": 62620,
+                "n_cache_tokens": 55744,
+                "n_output_tokens": 584,
+                "cost_usd": null
+            }
+        },
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.166667
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-11-14T06:03:32.068839Z",
+    "finished_at": "2026-11-14T06:06:40.383073Z",
+    "environment_setup": {
+        "started_at": "2026-11-14T06:03:32.115956Z",
+        "finished_at": "2026-11-14T06:03:39.227023Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-11-14T06:03:39.227037Z",
+        "finished_at": "2026-11-14T06:05:15.609686Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-11-14T06:05:15.610027Z",
+        "finished_at": "2026-11-14T06:06:12.549909Z"
+    },
+    "verifier": {
+        "started_at": "2026-11-14T06:06:25.060277Z",
+        "finished_at": "2026-11-14T06:06:40.383061Z"
+    },
+    "step_results": null,
+    "reward_valid": true
+}

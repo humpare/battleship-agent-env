@@ -1,0 +1,13 @@
+{
+ "scenario": "bs5-s130",
+ "score": 0.0,
+ "margin": 0.0,
+ "enemy_cells_left": 9,
+ "winner": null,
+ "won": false,
+ "finished": false,
+ "enemy_cells_hit": 0,
+ "own_cells_left": 9,
+ "your_shots": 0,
+ "opponent_shots": 0
+}

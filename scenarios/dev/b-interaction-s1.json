@@ -1,0 +1,326 @@
+{
+ "id": "b-interaction-s1",
+ "meta": {
+  "stage": "b-interaction",
+  "split": "dev",
+  "seed": 1,
+  "loops": 2,
+  "single_len": 7,
+  "loop_len": 3,
+  "headway": 4,
+  "slack": 2.0,
+  "free_run_ticks": 40
+ },
+ "horizon": 274,
+ "max_advance": 5,
+ "lateness_cap": 40,
+ "layout": {
+  "junctions": {
+   "JW": {
+    "cell": [
+     5,
+     6
+    ],
+    "stem": "S1",
+    "branches": [
+     "W_dep",
+     "W_arr"
+    ]
+   },
+   "J1w": {
+    "cell": [
+     5,
+     14
+    ],
+    "stem": "S1",
+    "branches": [
+     "L1a",
+     "L1b"
+    ]
+   },
+   "J1e": {
+    "cell": [
+     5,
+     18
+    ],
+    "stem": "S2",
+    "branches": [
+     "L1a",
+     "L1b"
+    ]
+   },
+   "J2w": {
+    "cell": [
+     5,
+     26
+    ],
+    "stem": "S2",
+    "branches": [
+     "L2a",
+     "L2b"
+    ]
+   },
+   "J2e": {
+    "cell": [
+     5,
+     30
+    ],
+    "stem": "S3",
+    "branches": [
+     "L2a",
+     "L2b"
+    ]
+   },
+   "JE": {
+    "cell": [
+     5,
+     38
+    ],
+    "stem": "S3",
+    "branches": [
+     "E_dep",
+     "E_arr"
+    ]
+   }
+  },
+  "sections": [
+   {
+    "name": "W_dep",
+    "kind": "origin",
+    "a": null,
+    "b": "JW",
+    "path": [
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      6
+     ]
+    ]
+   },
+   {
+    "name": "W_arr",
+    "kind": "terminus",
+    "a": "JW",
+    "b": null,
+    "path": [
+     [
+      5,
+      6
+     ],
+     [
+      2,
+      6
+     ]
+    ]
+   },
+   {
+    "name": "S1",
+    "kind": "single",
+    "a": "JW",
+    "b": "J1w",
+    "path": [
+     [
+      5,
+      6
+     ],
+     [
+      5,
+      14
+     ]
+    ]
+   },
+   {
+    "name": "L1a",
+    "kind": "loop",
+    "a": "J1w",
+    "b": "J1e",
+    "path": [
+     [
+      5,
+      14
+     ],
+     [
+      5,
+      18
+     ]
+    ]
+   },
+   {
+    "name": "L1b",
+    "kind": "loop",
+    "a": "J1w",
+    "b": "J1e",
+    "path": [
+     [
+      5,
+      14
+     ],
+     [
+      7,
+      14
+     ],
+     [
+      7,
+      18
+     ],
+     [
+      5,
+      18
+     ]
+    ]
+   },
+   {
+    "name": "S2",
+    "kind": "single",
+    "a": "J1e",
+    "b": "J2w",
+    "path": [
+     [
+      5,
+      18
+     ],
+     [
+      5,
+      26
+     ]
+    ]
+   },
+   {
+    "name": "L2a",
+    "kind": "loop",
+    "a": "J2w",
+    "b": "J2e",
+    "path": [
+     [
+      5,
+      26
+     ],
+     [
+      5,
+      30
+     ]
+    ]
+   },
+   {
+    "name": "L2b",
+    "kind": "loop",
+    "a": "J2w",
+    "b": "J2e",
+    "path": [
+     [
+      5,
+      26
+     ],
+     [
+      7,
+      26
+     ],
+     [
+      7,
+      30
+     ],
+     [
+      5,
+      30
+     ]
+    ]
+   },
+   {
+    "name": "S3",
+    "kind": "single",
+    "a": "J2e",
+    "b": "JE",
+    "path": [
+     [
+      5,
+      30
+     ],
+     [
+      5,
+      38
+     ]
+    ]
+   },
+   {
+    "name": "E_dep",
+    "kind": "origin",
+    "a": "JE",
+    "b": null,
+    "path": [
+     [
+      5,
+      38
+     ],
+     [
+      5,
+      43
+     ]
+    ]
+   },
+   {
+    "name": "E_arr",
+    "kind": "terminus",
+    "a": "JE",
+    "b": null,
+    "path": [
+     [
+      5,
+      38
+     ],
+     [
+      2,
+      38
+     ]
+    ]
+   }
+  ]
+ },
+ "trains": [
+  {
+   "id": "T1",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 1,
+   "deadline": 81
+  },
+  {
+   "id": "T2",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 2,
+   "deadline": 82
+  },
+  {
+   "id": "T3",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 10,
+   "deadline": 90
+  },
+  {
+   "id": "T4",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 11,
+   "deadline": 91
+  },
+  {
+   "id": "T5",
+   "origin": "E_dep",
+   "destination": "W_arr",
+   "earliest_departure": 17,
+   "deadline": 97
+  },
+  {
+   "id": "T6",
+   "origin": "W_dep",
+   "destination": "E_arr",
+   "earliest_departure": 21,
+   "deadline": 101
+  }
+ ],
+ "malfunctions": []
+}

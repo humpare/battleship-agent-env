@@ -1,0 +1,54 @@
+{"type": "header", "scenario": "seafight-poc", "scenario_hash": "dc418a29e0213369", "wall_time": 1794628244.969}
+{"type": "salvo", "turn": 1, "targets": ["C8"], "shots": [{"cell": "C8", "result": "miss"}], "score_after": 0.0, "wall_time": 1794628251.752}
+{"type": "salvo", "turn": 2, "targets": ["D4"], "shots": [{"cell": "D4", "result": "miss"}], "score_after": 0.0, "wall_time": 1794628252.06}
+{"type": "salvo", "turn": 3, "targets": ["C3"], "shots": [{"cell": "C3", "result": "hit"}], "score_after": 0.05, "wall_time": 1794628252.366}
+{"type": "salvo", "turn": 4, "targets": ["C4"], "shots": [{"cell": "C4", "result": "miss"}], "score_after": 0.05, "wall_time": 1794628252.681}
+{"type": "salvo", "turn": 5, "targets": ["D3"], "shots": [{"cell": "D3", "result": "miss"}], "score_after": 0.05, "wall_time": 1794628252.99}
+{"type": "salvo", "turn": 6, "targets": ["A3"], "shots": [{"cell": "A3", "result": "miss"}], "score_after": 0.05, "wall_time": 1794628253.33}
+{"type": "salvo", "turn": 7, "targets": ["C1"], "shots": [{"cell": "C1", "result": "miss"}], "score_after": 0.05, "wall_time": 1794628253.647}
+{"type": "salvo", "turn": 8, "targets": ["C2"], "shots": [{"cell": "C2", "result": "sunk", "ship_length": 2}], "score_after": 0.1, "wall_time": 1794628254.022}
+{"type": "salvo", "turn": 9, "targets": ["A5"], "shots": [{"cell": "A5", "result": "hit"}], "score_after": 0.15, "wall_time": 1794628254.257}
+{"type": "salvo", "turn": 10, "targets": ["A7"], "shots": [{"cell": "A7", "result": "miss"}], "score_after": 0.15, "wall_time": 1794628254.501}
+{"type": "salvo", "turn": 11, "targets": ["C5"], "shots": [{"cell": "C5", "result": "miss"}], "score_after": 0.15, "wall_time": 1794628254.731}
+{"type": "salvo", "turn": 12, "targets": ["A4"], "shots": [{"cell": "A4", "result": "hit"}], "score_after": 0.2, "wall_time": 1794628254.967}
+{"type": "salvo", "turn": 13, "targets": ["A6"], "shots": [{"cell": "A6", "result": "sunk", "ship_length": 3}], "score_after": 0.25, "wall_time": 1794628255.235}
+{"type": "salvo", "turn": 14, "targets": ["H8"], "shots": [{"cell": "H8", "result": "miss"}], "score_after": 0.25, "wall_time": 1794628255.422}
+{"type": "salvo", "turn": 15, "targets": ["G7"], "shots": [{"cell": "G7", "result": "miss"}], "score_after": 0.25, "wall_time": 1794628255.604}
+{"type": "salvo", "turn": 16, "targets": ["E6"], "shots": [{"cell": "E6", "result": "miss"}], "score_after": 0.25, "wall_time": 1794628255.783}
+{"type": "salvo", "turn": 17, "targets": ["H6"], "shots": [{"cell": "H6", "result": "miss"}], "score_after": 0.25, "wall_time": 1794628255.951}
+{"type": "salvo", "turn": 18, "targets": ["D7"], "shots": [{"cell": "D7", "result": "hit"}], "score_after": 0.3, "wall_time": 1794628256.117}
+{"type": "salvo", "turn": 19, "targets": ["D8"], "shots": [{"cell": "D8", "result": "miss"}], "score_after": 0.3, "wall_time": 1794628256.288}
+{"type": "salvo", "turn": 20, "targets": ["E7"], "shots": [{"cell": "E7", "result": "miss"}], "score_after": 0.3, "wall_time": 1794628256.449}
+{"type": "salvo", "turn": 21, "targets": ["D6"], "shots": [{"cell": "D6", "result": "miss"}], "score_after": 0.3, "wall_time": 1794628256.609}
+{"type": "salvo", "turn": 22, "targets": ["C7"], "shots": [{"cell": "C7", "result": "sunk", "ship_length": 2}], "score_after": 0.35, "wall_time": 1794628256.769}
+{"type": "salvo", "turn": 23, "targets": ["F9"], "shots": [{"cell": "F9", "result": "hit"}], "score_after": 0.4, "wall_time": 1794628256.893}
+{"type": "salvo", "turn": 24, "targets": ["G9"], "shots": [{"cell": "G9", "result": "miss"}], "score_after": 0.4, "wall_time": 1794628257.019}
+{"type": "salvo", "turn": 25, "targets": ["F8"], "shots": [{"cell": "F8", "result": "hit"}], "score_after": 0.45, "wall_time": 1794628257.141}
+{"type": "salvo", "turn": 26, "targets": ["F7"], "shots": [{"cell": "F7", "result": "hit"}], "score_after": 0.5, "wall_time": 1794628257.403}
+{"type": "salvo", "turn": 27, "targets": ["F6"], "shots": [{"cell": "F6", "result": "sunk", "ship_length": 4}], "score_after": 0.55, "wall_time": 1794628257.756}
+{"type": "salvo", "turn": 28, "targets": ["H4"], "shots": [{"cell": "H4", "result": "miss"}], "score_after": 0.55, "wall_time": 1794628257.841}
+{"type": "salvo", "turn": 29, "targets": ["E2"], "shots": [{"cell": "E2", "result": "miss"}], "score_after": 0.55, "wall_time": 1794628257.923}
+{"type": "salvo", "turn": 30, "targets": ["G3"], "shots": [{"cell": "G3", "result": "miss"}], "score_after": 0.55, "wall_time": 1794628258.001}
+{"type": "salvo", "turn": 31, "targets": ["J3"], "shots": [{"cell": "J3", "result": "sunk", "ship_length": 1}], "score_after": 0.6, "wall_time": 1794628258.077}
+{"type": "salvo", "turn": 32, "targets": ["I7"], "shots": [{"cell": "I7", "result": "miss"}], "score_after": 0.6, "wall_time": 1794628258.132}
+{"type": "salvo", "turn": 33, "targets": ["H1"], "shots": [{"cell": "H1", "result": "hit"}], "score_after": 0.65, "wall_time": 1794628258.188}
+{"type": "salvo", "turn": 34, "targets": ["I1"], "shots": [{"cell": "I1", "result": "miss"}], "score_after": 0.65, "wall_time": 1794628258.246}
+{"type": "salvo", "turn": 35, "targets": ["H2"], "shots": [{"cell": "H2", "result": "hit"}], "score_after": 0.7, "wall_time": 1794628258.301}
+{"type": "salvo", "turn": 36, "targets": ["H3"], "shots": [{"cell": "H3", "result": "sunk", "ship_length": 3}], "score_after": 0.75, "wall_time": 1794628258.476}
+{"type": "salvo", "turn": 37, "targets": ["I9"], "shots": [{"cell": "I9", "result": "miss"}], "score_after": 0.75, "wall_time": 1794628258.514}
+{"type": "salvo", "turn": 38, "targets": ["C9"], "shots": [{"cell": "C9", "result": "miss"}], "score_after": 0.75, "wall_time": 1794628258.551}
+{"type": "salvo", "turn": 39, "targets": ["J6"], "shots": [{"cell": "J6", "result": "miss"}], "score_after": 0.75, "wall_time": 1794628258.586}
+{"type": "salvo", "turn": 40, "targets": ["I5"], "shots": [{"cell": "I5", "result": "miss"}], "score_after": 0.75, "wall_time": 1794628258.619}
+{"type": "salvo", "turn": 41, "targets": ["A9"], "shots": [{"cell": "A9", "result": "miss"}], "score_after": 0.75, "wall_time": 1794628258.652}
+{"type": "salvo", "turn": 42, "targets": ["B10"], "shots": [{"cell": "B10", "result": "miss"}], "score_after": 0.75, "wall_time": 1794628258.683}
+{"type": "salvo", "turn": 43, "targets": ["J8"], "shots": [{"cell": "J8", "result": "miss"}], "score_after": 0.75, "wall_time": 1794628258.713}
+{"type": "salvo", "turn": 44, "targets": ["D10"], "shots": [{"cell": "D10", "result": "miss"}], "score_after": 0.75, "wall_time": 1794628258.742}
+{"type": "salvo", "turn": 45, "targets": ["F1"], "shots": [{"cell": "F1", "result": "miss"}], "score_after": 0.75, "wall_time": 1794628258.769}
+{"type": "salvo", "turn": 46, "targets": ["F3"], "shots": [{"cell": "F3", "result": "hit"}], "score_after": 0.8, "wall_time": 1794628258.797}
+{"type": "salvo", "turn": 47, "targets": ["F2"], "shots": [{"cell": "F2", "result": "sunk", "ship_length": 2}], "score_after": 0.85, "wall_time": 1794628258.824}
+{"type": "salvo", "turn": 48, "targets": ["D5"], "shots": [{"cell": "D5", "result": "miss"}], "score_after": 0.85, "wall_time": 1794628258.842}
+{"type": "salvo", "turn": 49, "targets": ["A2"], "shots": [{"cell": "A2", "result": "miss"}], "score_after": 0.85, "wall_time": 1794628258.86}
+{"type": "salvo", "turn": 50, "targets": ["D9"], "shots": [{"cell": "D9", "result": "miss"}], "score_after": 0.85, "wall_time": 1794628258.877}
+{"type": "salvo", "turn": 51, "targets": ["H5"], "shots": [{"cell": "H5", "result": "sunk", "ship_length": 1}], "score_after": 0.9, "wall_time": 1794628258.893}
+{"type": "salvo", "turn": 52, "targets": ["J5"], "shots": [{"cell": "J5", "result": "sunk", "ship_length": 1}], "score_after": 0.95, "wall_time": 1794628258.905}
+{"type": "salvo", "turn": 53, "targets": ["B9"], "shots": [{"cell": "B9", "result": "sunk", "ship_length": 1}], "score_after": 1.0, "wall_time": 1794628258.912}

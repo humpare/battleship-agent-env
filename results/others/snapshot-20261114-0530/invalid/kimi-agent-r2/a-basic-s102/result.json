@@ -1,0 +1,66 @@
+{
+ "scenario": "a-basic-s102",
+ "scenario_hash": "47af915dba579e09",
+ "score": 0.0,
+ "completed": 0,
+ "trains": 4,
+ "unfinished": 4,
+ "total_lateness": 0,
+ "final_tick": 147,
+ "decisions": 0,
+ "diagnostics": {
+  "blocked_train_ticks": 0,
+  "deadlocked_trains": [],
+  "malfunctions_seen": 0
+ },
+ "per_train": [
+  {
+   "train": "T1",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 85,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T2",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 86,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T3",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 92,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T4",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 97,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  }
+ ],
+ "mode": "agent",
+ "wall_seconds": 2.3,
+ "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://inference.verda.com/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+ "model": "kimi-k3-1-pro",
+ "llm_calls": 2,
+ "prompt_tokens": 2498,
+ "completion_tokens": 111,
+ "llm_seconds": 2.3
+}

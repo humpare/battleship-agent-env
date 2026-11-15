@@ -1,0 +1,2 @@
+{"type": "header", "scenario": "bs5-s110", "scenario_hash": "75a4669780ecce83", "wall_time": 1794722060.959}
+{"type": "place", "ships": [["A2", "A3", "A4"], ["C1", "C2"], ["C4", "C5"], ["E2"], ["E4"]], "wall_time": 1794722251.581}

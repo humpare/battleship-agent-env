@@ -1,0 +1,13 @@
+{
+ "scenario": "bs5-s123",
+ "score": 0.222222,
+ "margin": 0.4444,
+ "enemy_cells_left": 5,
+ "winner": null,
+ "won": false,
+ "finished": false,
+ "enemy_cells_hit": 4,
+ "own_cells_left": 9,
+ "your_shots": 4,
+ "opponent_shots": 0
+}

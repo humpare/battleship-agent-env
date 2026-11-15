@@ -1,0 +1,1 @@
+{"scenario": "duel5-exact-s1", "score": 0.166667, "margin": -0.6667, "enemy_cells_left": 6, "winner": "opponent", "won": false, "finished": true, "enemy_cells_hit": 3, "own_cells_left": 0, "your_shots": 7, "opponent_shots": 12}

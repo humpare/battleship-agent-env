@@ -1,0 +1,22 @@
+{"type": "header", "scenario": "c-pressure-s102", "scenario_hash": "00bffe8199ddc7bb", "wall_time": 1794623786.026}
+{"type": "step", "decision_id": 1, "commands": [{"train": "T1", "action": "route", "route": ["W_dep", "S1", "L1a"]}, {"train": "T2", "action": "route", "route": ["E_dep", "S3", "L2a", "S2", "L1b", "S1", "W_arr"]}, {"train": "T3", "action": "route", "route": ["W_dep", "S1", "L1a", "S2", "L2a", "S3", "E_arr"]}, {"train": "T4", "action": "route", "route": ["W_dep", "S1", "L1a", "S2", "L2a", "S3", "E_arr"]}, {"train": "T5", "action": "route", "route": ["E_dep", "S3", "L2a", "S2", "L1b", "S1", "W_arr"]}, {"train": "T6", "action": "route", "route": ["W_dep", "S1", "L1a", "S2", "L2a", "S3", "E_arr"]}], "tick_after": 1, "score_delta": 0.0, "events": [{"tick": 1, "type": "departure_window_open", "train": "T1"}, {"tick": 1, "type": "departure_window_open", "train": "T2"}], "wall_time": 1794623868.281}
+{"type": "step", "decision_id": 2, "commands": [], "tick_after": 3, "score_delta": 0.0, "events": [{"tick": 3, "type": "departure_window_open", "train": "T3"}], "wall_time": 1794623887.024}
+{"type": "step", "decision_id": 3, "commands": [], "tick_after": 5, "score_delta": 0.0, "events": [{"tick": 5, "type": "departure_window_open", "train": "T4"}], "wall_time": 1794623888.639}
+{"type": "step", "decision_id": 4, "commands": [], "tick_after": 6, "score_delta": 0.0, "events": [{"tick": 6, "type": "departure_window_open", "train": "T5"}], "wall_time": 1794623889.988}
+{"type": "step", "decision_id": 5, "commands": [], "tick_after": 8, "score_delta": 0.0, "events": [{"tick": 8, "type": "departure_window_open", "train": "T6"}], "wall_time": 1794623891.557}
+{"type": "step", "decision_id": 6, "commands": [], "tick_after": 13, "score_delta": 0.0, "events": [], "wall_time": 1794623893.309}
+{"type": "step", "decision_id": 7, "commands": [], "tick_after": 17, "score_delta": 0.0, "events": [{"tick": 17, "type": "reached_end_of_route", "train": "T1", "section": "L1a"}], "wall_time": 1794623895.458}
+{"type": "step", "decision_id": 8, "commands": [], "tick_after": 19, "score_delta": 0.0, "events": [{"tick": 19, "type": "blocked", "train": "T3", "by": "T1"}], "wall_time": 1794623903.317}
+{"type": "step", "decision_id": 9, "commands": [], "tick_after": 20, "score_delta": 0.0, "events": [{"tick": 20, "type": "blocked", "train": "T4", "by": "T3"}], "wall_time": 1794623905.174}
+{"type": "step", "decision_id": 10, "commands": [], "tick_after": 22, "score_delta": 0.0, "events": [{"tick": 22, "type": "blocked", "train": "T6", "by": "T4"}], "wall_time": 1794623907.064}
+{"type": "step", "decision_id": 11, "commands": [], "tick_after": 27, "score_delta": 0.0, "events": [], "wall_time": 1794623908.768}
+{"type": "step", "decision_id": 12, "commands": [], "tick_after": 32, "score_delta": 0.0, "events": [], "wall_time": 1794623910.456}
+{"type": "step", "decision_id": 13, "commands": [{"train": "T1", "action": "route", "route": ["L1a", "S2", "L2a", "S3", "E_arr"]}], "tick_after": 37, "score_delta": 0.0, "events": [], "wall_time": 1794623916.668}
+{"type": "step", "decision_id": 14, "commands": [], "tick_after": 42, "score_delta": 0.0, "events": [], "wall_time": 1794623918.675}
+{"type": "step", "decision_id": 15, "commands": [], "tick_after": 44, "score_delta": 0.166667, "events": [{"tick": 44, "type": "arrived", "train": "T2"}], "wall_time": 1794623920.134}
+{"type": "step", "decision_id": 16, "commands": [], "tick_after": 49, "score_delta": 0.166666, "events": [{"tick": 49, "type": "arrived", "train": "T5"}], "wall_time": 1794623921.576}
+{"type": "step", "decision_id": 17, "commands": [], "tick_after": 54, "score_delta": 0.0, "events": [], "wall_time": 1794623923.523}
+{"type": "step", "decision_id": 18, "commands": [], "tick_after": 55, "score_delta": 0.166667, "events": [{"tick": 55, "type": "arrived", "train": "T1"}], "wall_time": 1794623942.57}
+{"type": "step", "decision_id": 19, "commands": [], "tick_after": 56, "score_delta": 0.166667, "events": [{"tick": 56, "type": "arrived", "train": "T3"}], "wall_time": 1794623944.614}
+{"type": "step", "decision_id": 20, "commands": [], "tick_after": 57, "score_delta": 0.166666, "events": [{"tick": 57, "type": "arrived", "train": "T4"}], "wall_time": 1794623946.269}
+{"type": "step", "decision_id": 21, "commands": [], "tick_after": 58, "score_delta": 0.166667, "events": [{"tick": 58, "type": "arrived", "train": "T6"}], "wall_time": 1794623947.8}

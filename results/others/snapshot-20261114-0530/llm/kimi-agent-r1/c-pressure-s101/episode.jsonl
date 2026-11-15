@@ -1,0 +1,62 @@
+{"type": "header", "scenario": "c-pressure-s101", "scenario_hash": "9ceb93831d07363a", "wall_time": 1794623660.842}
+{"type": "step", "decision_id": 1, "commands": [{"train": "T1", "action": "route", "route": ["W_dep", "S1", "L1a", "S2", "L2a"]}, {"train": "T4", "action": "route", "route": ["W_dep", "S1", "L1a", "S2", "L2a"]}, {"train": "T6", "action": "route", "route": ["W_dep", "S1", "L1a", "S2", "L2a"]}, {"train": "T2", "action": "route", "route": ["E_dep", "S3", "L2b"]}, {"train": "T3", "action": "route", "route": ["E_dep", "S3", "L2b"]}, {"train": "T5", "action": "route", "route": ["E_dep", "S3", "L2b"]}], "tick_after": 1, "score_delta": 0.0, "events": [{"tick": 1, "type": "departure_window_open", "train": "T1"}], "wall_time": 1794623696.969}
+{"type": "step", "decision_id": 2, "commands": [], "tick_after": 3, "score_delta": 0.0, "events": [{"tick": 3, "type": "departure_window_open", "train": "T2"}, {"tick": 3, "type": "departure_window_open", "train": "T3"}], "wall_time": 1794623701.359}
+{"type": "step", "decision_id": 3, "commands": [], "tick_after": 4, "score_delta": 0.0, "events": [{"tick": 4, "type": "blocked", "train": "T3", "by": "contention"}, {"tick": 4, "type": "departure_window_open", "train": "T4"}], "wall_time": 1794623703.651}
+{"type": "step", "decision_id": 4, "commands": [], "tick_after": 6, "score_delta": 0.0, "events": [{"tick": 6, "type": "departure_window_open", "train": "T5"}], "wall_time": 1794623707.441}
+{"type": "step", "decision_id": 5, "commands": [], "tick_after": 7, "score_delta": 0.0, "events": [{"tick": 7, "type": "departure_window_open", "train": "T6"}], "wall_time": 1794623709.704}
+{"type": "step", "decision_id": 6, "commands": [], "tick_after": 12, "score_delta": 0.0, "events": [], "wall_time": 1794623711.753}
+{"type": "step", "decision_id": 7, "commands": [], "tick_after": 17, "score_delta": 0.0, "events": [], "wall_time": 1794623713.913}
+{"type": "step", "decision_id": 8, "commands": [], "tick_after": 22, "score_delta": 0.0, "events": [], "wall_time": 1794623715.492}
+{"type": "step", "decision_id": 9, "commands": [], "tick_after": 23, "score_delta": 0.0, "events": [{"tick": 23, "type": "reached_end_of_route", "train": "T2", "section": "L2b"}], "wall_time": 1794623716.952}
+{"type": "step", "decision_id": 10, "commands": [], "tick_after": 24, "score_delta": 0.0, "events": [{"tick": 24, "type": "blocked", "train": "T3", "by": "T2"}], "wall_time": 1794623718.288}
+{"type": "step", "decision_id": 11, "commands": [], "tick_after": 25, "score_delta": 0.0, "events": [{"tick": 25, "type": "blocked", "train": "T5", "by": "T3"}], "wall_time": 1794623719.761}
+{"type": "step", "decision_id": 12, "commands": [], "tick_after": 29, "score_delta": 0.0, "events": [{"tick": 29, "type": "reached_end_of_route", "train": "T1", "section": "L2a"}], "wall_time": 1794623721.326}
+{"type": "step", "decision_id": 13, "commands": [{"train": "T1", "action": "route", "route": ["L2a", "S3", "E_arr"]}, {"train": "T4", "action": "route", "route": ["L2a", "S3", "E_arr"]}, {"train": "T6", "action": "route", "route": ["S2", "L2a", "S3", "E_arr"]}, {"train": "T2", "action": "route", "route": ["L2b", "S2", "L1a", "S1", "W_arr"]}, {"train": "T3", "action": "route", "route": ["L2b", "S2", "L1a", "S1", "W_arr"]}, {"train": "T5", "action": "route", "route": ["L2b", "S2", "L1a", "S1", "W_arr"]}], "tick_after": 31, "score_delta": 0.0, "events": [{"tick": 31, "type": "blocked", "train": "T6", "by": "contention"}, {"tick": 31, "type": "deadlock", "train": "T2"}, {"tick": 31, "type": "deadlock", "train": "T3"}, {"tick": 31, "type": "deadlock", "train": "T5"}, {"tick": 31, "type": "deadlock", "train": "T6"}], "wall_time": 1794623732.189}
+{"type": "step", "decision_id": 14, "commands": [], "tick_after": 32, "score_delta": 0.0, "events": [{"tick": 32, "type": "blocked", "train": "T2", "by": "T6"}, {"tick": 32, "type": "blocked", "train": "T3", "by": "T2"}, {"tick": 32, "type": "blocked", "train": "T5", "by": "T3"}], "wall_time": 1794623738.815}
+{"type": "step", "decision_id": 15, "commands": [], "tick_after": 37, "score_delta": 0.0, "events": [], "wall_time": 1794623740.777}
+{"type": "step", "decision_id": 16, "commands": [], "tick_after": 40, "score_delta": 0.166667, "events": [{"tick": 40, "type": "arrived", "train": "T1"}], "wall_time": 1794623774.936}
+{"type": "step", "decision_id": 17, "commands": [], "tick_after": 43, "score_delta": 0.166666, "events": [{"tick": 43, "type": "arrived", "train": "T4"}], "wall_time": 1794623777.05}
+{"type": "step", "decision_id": 18, "commands": [], "tick_after": 48, "score_delta": 0.0, "events": [], "wall_time": 1794623781.153}
+{"type": "step", "decision_id": 19, "commands": [], "tick_after": 53, "score_delta": 0.0, "events": [], "wall_time": 1794623783.268}
+{"type": "step", "decision_id": 20, "commands": [], "tick_after": 58, "score_delta": 0.0, "events": [], "wall_time": 1794623784.78}
+{"type": "step", "decision_id": 21, "commands": [], "tick_after": 63, "score_delta": 0.0, "events": [], "wall_time": 1794623786.413}
+{"type": "step", "decision_id": 22, "commands": [], "tick_after": 68, "score_delta": 0.0, "events": [], "wall_time": 1794623788.84}
+{"type": "step", "decision_id": 23, "commands": [], "tick_after": 73, "score_delta": 0.0, "events": [], "wall_time": 1794623791.009}
+{"type": "step", "decision_id": 24, "commands": [], "tick_after": 78, "score_delta": 0.0, "events": [], "wall_time": 1794623792.688}
+{"type": "step", "decision_id": 25, "commands": [], "tick_after": 83, "score_delta": 0.0, "events": [], "wall_time": 1794623794.791}
+{"type": "step", "decision_id": 26, "commands": [], "tick_after": 88, "score_delta": 0.0, "events": [], "wall_time": 1794623796.403}
+{"type": "step", "decision_id": 27, "commands": [], "tick_after": 93, "score_delta": 0.0, "events": [], "wall_time": 1794623830.296}
+{"type": "step", "decision_id": 28, "commands": [], "tick_after": 98, "score_delta": 0.0, "events": [], "wall_time": 1794623832.219}
+{"type": "step", "decision_id": 29, "commands": [], "tick_after": 103, "score_delta": 0.0, "events": [], "wall_time": 1794623833.602}
+{"type": "step", "decision_id": 30, "commands": [], "tick_after": 108, "score_delta": 0.0, "events": [], "wall_time": 1794623835.113}
+{"type": "step", "decision_id": 31, "commands": [], "tick_after": 113, "score_delta": 0.0, "events": [], "wall_time": 1794623837.338}
+{"type": "step", "decision_id": 32, "commands": [], "tick_after": 118, "score_delta": 0.0, "events": [], "wall_time": 1794623839.447}
+{"type": "step", "decision_id": 33, "commands": [], "tick_after": 123, "score_delta": 0.0, "events": [], "wall_time": 1794623840.931}
+{"type": "step", "decision_id": 34, "commands": [], "tick_after": 128, "score_delta": 0.0, "events": [], "wall_time": 1794623842.949}
+{"type": "step", "decision_id": 35, "commands": [], "tick_after": 133, "score_delta": 0.0, "events": [], "wall_time": 1794623844.85}
+{"type": "step", "decision_id": 36, "commands": [], "tick_after": 138, "score_delta": 0.0, "events": [], "wall_time": 1794623846.955}
+{"type": "step", "decision_id": 37, "commands": [], "tick_after": 143, "score_delta": 0.0, "events": [], "wall_time": 1794623848.665}
+{"type": "step", "decision_id": 38, "commands": [], "tick_after": 148, "score_delta": 0.0, "events": [], "wall_time": 1794623850.142}
+{"type": "step", "decision_id": 39, "commands": [], "tick_after": 153, "score_delta": 0.0, "events": [], "wall_time": 1794623851.89}
+{"type": "step", "decision_id": 40, "commands": [], "tick_after": 158, "score_delta": 0.0, "events": [], "wall_time": 1794623853.673}
+{"type": "step", "decision_id": 41, "commands": [], "tick_after": 163, "score_delta": 0.0, "events": [], "wall_time": 1794623855.819}
+{"type": "step", "decision_id": 42, "commands": [], "tick_after": 168, "score_delta": 0.0, "events": [], "wall_time": 1794623857.872}
+{"type": "step", "decision_id": 43, "commands": [], "tick_after": 173, "score_delta": 0.0, "events": [], "wall_time": 1794623859.478}
+{"type": "step", "decision_id": 44, "commands": [], "tick_after": 178, "score_delta": 0.0, "events": [], "wall_time": 1794623861.103}
+{"type": "step", "decision_id": 45, "commands": [], "tick_after": 183, "score_delta": 0.0, "events": [], "wall_time": 1794623862.682}
+{"type": "step", "decision_id": 46, "commands": [], "tick_after": 188, "score_delta": 0.0, "events": [], "wall_time": 1794623864.424}
+{"type": "step", "decision_id": 47, "commands": [], "tick_after": 193, "score_delta": 0.0, "events": [], "wall_time": 1794623883.686}
+{"type": "step", "decision_id": 48, "commands": [], "tick_after": 198, "score_delta": 0.0, "events": [], "wall_time": 1794623885.978}
+{"type": "step", "decision_id": 49, "commands": [], "tick_after": 203, "score_delta": 0.0, "events": [], "wall_time": 1794623887.502}
+{"type": "step", "decision_id": 50, "commands": [], "tick_after": 208, "score_delta": 0.0, "events": [], "wall_time": 1794623890.128}
+{"type": "step", "decision_id": 51, "commands": [], "tick_after": 213, "score_delta": 0.0, "events": [], "wall_time": 1794623891.905}
+{"type": "step", "decision_id": 52, "commands": [], "tick_after": 218, "score_delta": 0.0, "events": [], "wall_time": 1794623893.435}
+{"type": "step", "decision_id": 53, "commands": [], "tick_after": 223, "score_delta": 0.0, "events": [], "wall_time": 1794623895.244}
+{"type": "step", "decision_id": 54, "commands": [], "tick_after": 228, "score_delta": 0.0, "events": [], "wall_time": 1794623897.14}
+{"type": "step", "decision_id": 55, "commands": [], "tick_after": 233, "score_delta": 0.0, "events": [], "wall_time": 1794623898.684}
+{"type": "step", "decision_id": 56, "commands": [], "tick_after": 238, "score_delta": 0.0, "events": [], "wall_time": 1794623900.361}
+{"type": "step", "decision_id": 57, "commands": [], "tick_after": 243, "score_delta": 0.0, "events": [], "wall_time": 1794623901.982}
+{"type": "step", "decision_id": 58, "commands": [], "tick_after": 248, "score_delta": 0.0, "events": [], "wall_time": 1794623904.053}
+{"type": "step", "decision_id": 59, "commands": [], "tick_after": 253, "score_delta": 0.0, "events": [], "wall_time": 1794623905.994}
+{"type": "step", "decision_id": 60, "commands": [], "tick_after": 258, "score_delta": 0.0, "events": [], "wall_time": 1794623908.135}
+{"type": "step", "decision_id": 61, "commands": [], "tick_after": 260, "score_delta": 0.0, "events": [], "wall_time": 1794623913.177}

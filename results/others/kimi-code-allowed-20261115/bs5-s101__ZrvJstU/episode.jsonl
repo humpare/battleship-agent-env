@@ -1,0 +1,13 @@
+{"type": "header", "scenario": "bs5-s101", "scenario_hash": "6c08d954d51daa9f", "wall_time": 1794718341.365}
+{"type": "place", "ships": [["A2", "A3", "A4"], ["C1", "C2"], ["C4", "C5"], ["E2"], ["E4"]], "wall_time": 1794718524.005}
+{"type": "fire", "target": "A1", "your_shot": {"cell": "A1", "result": "hit"}, "opponent_shots": [], "score_after": 0.055556, "wall_time": 1794718533.293}
+{"type": "fire", "target": "B1", "your_shot": {"cell": "B1", "result": "sunk", "ship_length": 2}, "opponent_shots": [], "score_after": 0.111111, "wall_time": 1794718559.713}
+{"type": "fire", "target": "A5", "your_shot": {"cell": "A5", "result": "hit"}, "opponent_shots": [], "score_after": 0.166667, "wall_time": 1794718563.772}
+{"type": "fire", "target": "A3", "your_shot": {"cell": "A3", "result": "sunk", "ship_length": 1}, "opponent_shots": [], "score_after": 0.222222, "wall_time": 1794718603.615}
+{"type": "fire", "target": "B5", "your_shot": {"cell": "B5", "result": "hit"}, "opponent_shots": [], "score_after": 0.277778, "wall_time": 1794718607.275}
+{"type": "fire", "target": "C5", "your_shot": {"cell": "C5", "result": "sunk", "ship_length": 3}, "opponent_shots": [], "score_after": 0.333333, "wall_time": 1794718608.853}
+{"type": "fire", "target": "E5", "your_shot": {"cell": "E5", "result": "miss"}, "opponent_shots": [{"cell": "A1", "result": "miss"}], "score_after": 0.333333, "wall_time": 1794718616.222}
+{"type": "fire", "target": "E1", "your_shot": {"cell": "E1", "result": "hit"}, "opponent_shots": [], "score_after": 0.388889, "wall_time": 1794718620.729}
+{"type": "fire", "target": "D1", "your_shot": {"cell": "D1", "result": "miss"}, "opponent_shots": [{"cell": "E5", "result": "miss"}], "score_after": 0.388889, "wall_time": 1794718626.402}
+{"type": "fire", "target": "E2", "your_shot": {"cell": "E2", "result": "sunk", "ship_length": 2}, "opponent_shots": [], "score_after": 0.444444, "wall_time": 1794718628.11}
+{"type": "fire", "target": "C3", "your_shot": {"cell": "C3", "result": "sunk", "ship_length": 1}, "opponent_shots": [], "score_after": 1.0, "wall_time": 1794718633.135}

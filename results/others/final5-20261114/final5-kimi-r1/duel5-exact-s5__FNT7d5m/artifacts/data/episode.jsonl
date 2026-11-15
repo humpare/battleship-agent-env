@@ -1,0 +1,6 @@
+{"type": "header", "scenario": "duel5-exact-s5", "scenario_hash": "039422ad6a673436", "wall_time": 1794636574.972}
+{"type": "place", "ships": [["A1", "B1", "C1"], ["E2", "E3"], ["A4", "A5"], ["C3"], ["E5"]], "wall_time": 1794636653.465}
+{"type": "fire", "target": "C3", "your_shot": {"cell": "C3", "result": "hit"}, "opponent_shots": [], "score_after": 0.055556, "wall_time": 1794636655.733}
+{"type": "fire", "target": "C2", "your_shot": {"cell": "C2", "result": "miss"}, "opponent_shots": [{"cell": "E5", "result": "sunk", "ship_length": 1}, {"cell": "E1", "result": "miss"}], "score_after": 0.055556, "wall_time": 1794636661.345}
+{"type": "fire", "target": "B3", "your_shot": {"cell": "B3", "result": "miss"}, "opponent_shots": [{"cell": "E3", "result": "hit"}, {"cell": "E2", "result": "sunk", "ship_length": 2}, {"cell": "C3", "result": "sunk", "ship_length": 1}, {"cell": "A5", "result": "hit"}, {"cell": "B5", "result": "miss"}], "score_after": 0.055556, "wall_time": 1794636666.545}
+{"type": "fire", "target": "D3", "your_shot": {"cell": "D3", "result": "miss"}, "opponent_shots": [{"cell": "A4", "result": "sunk", "ship_length": 2}, {"cell": "B1", "result": "hit"}, {"cell": "C1", "result": "hit"}, {"cell": "A1", "result": "sunk", "ship_length": 3}], "score_after": 0.055556, "wall_time": 1794636669.149}

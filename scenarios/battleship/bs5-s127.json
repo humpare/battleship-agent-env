@@ -1,0 +1,1 @@
+{"id": "bs5-s127", "seed": 127, "board": 5, "fleet": [3, 2, 2, 1, 1], "opponent": "exact", "opponent_placement": "dealt", "opponent_fleet": [["A1", "B1", "C1"], ["D3", "E3"], ["A5", "B5"], ["A3"], ["E5"]], "opponent_shot_seed": 1005726, "disclose_opponent": true}

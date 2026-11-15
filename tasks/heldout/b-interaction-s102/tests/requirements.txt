@@ -1,0 +1,299 @@
+annotated-types==0.8.0
+    # via pydantic
+anyio==4.16.0
+    # via
+    #   httpx
+    #   httpx2
+    #   mcp
+    #   sse-starlette
+    #   starlette
+asttokens==3.0.2
+    # via stack-data
+attrs==26.1.0
+    # via
+    #   entrypoint
+    #   flatland-rl
+    #   jsonschema
+    #   referencing
+    #   versions
+boto3==1.44.3
+    # via flatland-rl
+botocore==1.44.3
+    # via
+    #   boto3
+    #   s3transfer
+certifi==2026.10.23
+    # via
+    #   httpcore
+    #   httpx
+    #   requests
+cffi==2.1.1 ; platform_python_implementation != 'PyPy'
+    # via cryptography
+charset-normalizer==3.5.2
+    # via requests
+click==8.5.1
+    # via
+    #   flatland-rl
+    #   uvicorn
+    #   versions
+colorama==0.4.6 ; sys_platform == 'win32'
+    # via
+    #   ipython
+    #   tqdm
+comm==0.2.3
+    # via ipywidgets
+contourpy==1.3.2
+    # via
+    #   flatland-rl
+    #   matplotlib
+crowdai-api==0.1.22
+    # via flatland-rl
+cryptography==50.0.2
+    # via pyjwt
+cycler==0.12.1
+    # via matplotlib
+cython==3.3.1
+    # via flatland-rl
+decorator==5.3.1
+    # via ipython
+entrypoint==2.1.0
+    # via versions
+executing==2.3.0
+    # via stack-data
+fastenum==1.1.2
+    # via flatland-rl
+flatland-rl==4.3.0
+    # via flatland-dispatch
+fonttools==4.68.0
+    # via matplotlib
+h11==0.16.0
+    # via
+    #   httpcore
+    #   httpcore2
+    #   uvicorn
+httpcore==1.0.9
+    # via httpx
+httpcore2==2.16.0 ; sys_platform != 'emscripten'
+    # via httpx2
+httpx==0.28.1
+    # via flatland-dispatch
+httpx2==2.16.0
+    # via mcp
+httpx2-jsfetch==1.0 ; sys_platform == 'emscripten'
+    # via httpx2
+idna==3.20
+    # via
+    #   anyio
+    #   httpx
+    #   httpx2
+    #   requests
+importlib-resources==7.1.0
+    # via flatland-rl
+ipycanvas==0.14.3
+    # via flatland-rl
+ipyevents==2.0.4
+    # via flatland-rl
+ipython==8.39.0
+    # via
+    #   flatland-rl
+    #   ipywidgets
+ipywidgets==8.1.9
+    # via
+    #   flatland-rl
+    #   ipycanvas
+    #   ipyevents
+jedi==0.20.1
+    # via ipython
+jmespath==1.1.0
+    # via
+    #   boto3
+    #   botocore
+jsonschema==4.26.0
+    # via mcp
+jsonschema-specifications==2025.9.1
+    # via jsonschema
+jupyterlab-widgets==3.0.17
+    # via ipywidgets
+kiwisolver==1.5.1
+    # via matplotlib
+lxml==6.1.3
+    # via svgutils
+matplotlib==3.10.9
+    # via flatland-rl
+matplotlib-inline==0.2.2
+    # via ipython
+mcp==2.3.0
+    # via flatland-dispatch
+mcp-types==2.3.0
+    # via mcp
+msgpack==1.2.4
+    # via
+    #   flatland-rl
+    #   msgpack-numpy
+msgpack-numpy==0.4.8
+    # via flatland-rl
+named==1.4.2
+    # via
+    #   entrypoint
+    #   solus
+networkx==3.4.2
+    # via flatland-rl
+numpy==1.26.4
+    # via
+    #   contourpy
+    #   flatland-rl
+    #   ipycanvas
+    #   matplotlib
+    #   msgpack-numpy
+    #   pandas
+opentelemetry-api==1.45.2
+    # via mcp
+orderings==1.6.0
+    # via versions
+packaging==26.3
+    # via matplotlib
+pandas==2.3.3
+    # via flatland-rl
+parso==0.8.7
+    # via jedi
+pexpect==4.9.0 ; sys_platform != 'emscripten' and sys_platform != 'win32'
+    # via ipython
+pillow==13.0.0
+    # via
+    #   flatland-rl
+    #   ipycanvas
+    #   matplotlib
+prompt-toolkit==3.0.53
+    # via ipython
+ptyprocess==0.7.0 ; sys_platform != 'emscripten' and sys_platform != 'win32'
+    # via pexpect
+pure-eval==0.2.4
+    # via stack-data
+pycparser==3.12 ; implementation_name != 'PyPy' and platform_python_implementation != 'PyPy'
+    # via cffi
+pydantic==2.14.3
+    # via
+    #   flatland-rl
+    #   mcp
+    #   mcp-types
+pydantic-core==2.50.4
+    # via pydantic
+pyglet==2.1.19
+    # via flatland-rl
+pygments==2.21.0
+    # via ipython
+pyjwt==2.15.1
+    # via mcp
+pyparsing==3.3.3
+    # via matplotlib
+python-dateutil==2.9.0.post0
+    # via
+    #   botocore
+    #   flatland-rl
+    #   matplotlib
+    #   pandas
+python-gitlab==8.6.0
+    # via crowdai-api
+python-multipart==0.0.33
+    # via mcp
+pytz==2026.6
+    # via pandas
+pywin32==312 ; sys_platform == 'win32'
+    # via mcp
+pyyaml==6.0.3
+    # via flatland-rl
+recordtype==1.4
+    # via flatland-rl
+redis==7.4.1
+    # via
+    #   crowdai-api
+    #   flatland-rl
+referencing==0.37.0
+    # via
+    #   jsonschema
+    #   jsonschema-specifications
+requests==2.34.2
+    # via
+    #   crowdai-api
+    #   flatland-rl
+    #   python-gitlab
+    #   requests-toolbelt
+requests-toolbelt==1.0.0
+    # via python-gitlab
+rpds-py==0.30.0
+    # via
+    #   flatland-rl
+    #   jsonschema
+    #   referencing
+s3transfer==0.19.3
+    # via boto3
+six==1.17.0
+    # via
+    #   python-dateutil
+    #   recordtype
+solus==1.2.2
+    # via versions
+sse-starlette==3.7.0
+    # via mcp
+stack-data==0.6.3
+    # via ipython
+starlette==1.10.0
+    # via
+    #   mcp
+    #   sse-starlette
+svgutils==0.3.4
+    # via flatland-rl
+timeout-decorator==0.5.0
+    # via flatland-rl
+tqdm==4.70.1
+    # via flatland-rl
+traitlets==5.16.1
+    # via
+    #   ipython
+    #   ipywidgets
+    #   matplotlib-inline
+truststore==0.10.5 ; sys_platform != 'emscripten'
+    # via
+    #   httpcore2
+    #   httpx2
+typing-aliases==1.10.1
+    # via
+    #   entrypoint
+    #   orderings
+    #   versions
+typing-extensions==4.16.0
+    # via
+    #   anyio
+    #   flatland-rl
+    #   httpx2
+    #   mcp
+    #   mcp-types
+    #   named
+    #   opentelemetry-api
+    #   orderings
+    #   pydantic
+    #   pydantic-core
+    #   referencing
+    #   starlette
+    #   typing-aliases
+    #   typing-inspection
+    #   versions
+typing-inspection==0.4.5
+    # via
+    #   mcp
+    #   pydantic
+tzdata==2026.6
+    # via pandas
+urllib3==2.8.0
+    # via
+    #   botocore
+    #   flatland-rl
+    #   requests
+uvicorn==0.54.0 ; sys_platform != 'emscripten'
+    # via mcp
+versions==1.6.1
+    # via flatland-rl
+wcwidth==0.9.4
+    # via prompt-toolkit
+widgetsnbextension==4.0.16
+    # via ipywidgets

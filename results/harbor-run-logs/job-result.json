@@ -1,0 +1,66 @@
+{
+    "schema_version": 1,
+    "id": "465a37f1-6f6a-4b54-96cc-aa1251727654",
+    "started_at": "2026-11-15T09:03:58.352640",
+    "updated_at": "2026-11-15T09:28:53.002315",
+    "finished_at": "2026-11-15T09:28:53.002315",
+    "n_total_trials": 15,
+    "stats": {
+        "n_completed_trials": 15,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "opencode__verda/kimi-k3-1-pro__battleship5": {
+                "n_trials": 15,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.4666666
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.722222": [
+                            "bs5-s101__kwFPbhu",
+                            "bs5-s103__fbvVDAF"
+                        ],
+                        "0.222222": [
+                            "bs5-s102__qaiKpPc",
+                            "bs5-s103__sJXk48r"
+                        ],
+                        "0.555556": [
+                            "bs5-s104__bfXmfZb",
+                            "bs5-s104__PRZ6XYC"
+                        ],
+                        "1.0": [
+                            "bs5-s105__dVDYw7P"
+                        ],
+                        "0.277778": [
+                            "bs5-s101__isQiPET",
+                            "bs5-s102__QjPUyaW",
+                            "bs5-s101__nyFYWTP"
+                        ],
+                        "0.444444": [
+                            "bs5-s103__sJtp2HU",
+                            "bs5-s105__qurGDfp",
+                            "bs5-s102__af6KQed",
+                            "bs5-s104__2bRh5Kk"
+                        ],
+                        "0.388889": [
+                            "bs5-s105__ZrDJDyw"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 2396954,
+        "n_cache_tokens": 2273728,
+        "n_output_tokens": 12889,
+        "cost_usd": 2.0800140000000003
+    }
+}

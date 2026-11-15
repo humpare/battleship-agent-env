@@ -1,0 +1,6 @@
+{"type": "header", "scenario": "bs5-s124", "scenario_hash": "d86eab1728ecfe21", "wall_time": 1794721616.535}
+{"type": "place", "ships": [["B1", "C1", "D1"], ["A3", "B3"], ["D3", "E3"], ["B5"], ["D5"]], "wall_time": 1794721623.527}
+{"type": "fire", "target": "A1", "your_shot": {"cell": "A1", "result": "sunk", "ship_length": 1}, "opponent_shots": [], "score_after": 0.055556, "wall_time": 1794721623.542}
+{"type": "fire", "target": "E1", "your_shot": {"cell": "E1", "result": "hit"}, "opponent_shots": [], "score_after": 0.111111, "wall_time": 1794721623.553}
+{"type": "fire", "target": "D1", "your_shot": {"cell": "D1", "result": "miss"}, "opponent_shots": [{"cell": "A5", "result": "miss"}], "score_after": 0.111111, "wall_time": 1794721623.57}
+{"type": "fire", "target": "E2", "your_shot": {"cell": "E2", "result": "hit"}, "opponent_shots": [], "score_after": 0.166667, "wall_time": 1794721623.58}

@@ -1,0 +1,10 @@
+{
+ "scenario": "seafight-poc",
+ "score": 1.0,
+ "ship_cells_hit": 20,
+ "ships_sunk": 10,
+ "fleet_sunk": true,
+ "shots_used": 53,
+ "budget": 100,
+ "turns": 53
+}

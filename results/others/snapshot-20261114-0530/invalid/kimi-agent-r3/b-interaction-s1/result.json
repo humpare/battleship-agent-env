@@ -1,0 +1,86 @@
+{
+ "scenario": "b-interaction-s1",
+ "scenario_hash": "c527f19c693b6e50",
+ "score": 0.0,
+ "completed": 0,
+ "trains": 6,
+ "unfinished": 6,
+ "total_lateness": 0,
+ "final_tick": 274,
+ "decisions": 3,
+ "diagnostics": {
+  "blocked_train_ticks": 947,
+  "deadlocked_trains": [],
+  "malfunctions_seen": 0
+ },
+ "per_train": [
+  {
+   "train": "T1",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 81,
+   "lateness": null,
+   "score": 0.0,
+   "departed": true,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T2",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 82,
+   "lateness": null,
+   "score": 0.0,
+   "departed": true,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T3",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 90,
+   "lateness": null,
+   "score": 0.0,
+   "departed": true,
+   "blocked_ticks": 237
+  },
+  {
+   "train": "T4",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 91,
+   "lateness": null,
+   "score": 0.0,
+   "departed": true,
+   "blocked_ticks": 244
+  },
+  {
+   "train": "T5",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 97,
+   "lateness": null,
+   "score": 0.0,
+   "departed": true,
+   "blocked_ticks": 239
+  },
+  {
+   "train": "T6",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 101,
+   "lateness": null,
+   "score": 0.0,
+   "departed": true,
+   "blocked_ticks": 227
+  }
+ ],
+ "mode": "agent",
+ "wall_seconds": 27.0,
+ "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://inference.verda.com/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+ "model": "kimi-k3-1-pro",
+ "llm_calls": 5,
+ "prompt_tokens": 12772,
+ "completion_tokens": 2145,
+ "llm_seconds": 27.0
+}

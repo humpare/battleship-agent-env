@@ -1,0 +1,3 @@
+{"type": "header", "scenario": "e-recovery-s1", "scenario_hash": "0402b67a4f856131", "wall_time": 1794622760.769}
+{"type": "step", "decision_id": 1, "commands": [{"train": "T1", "action": "route", "route": ["W_dep", "S1", "L1a"]}, {"train": "T2", "action": "route", "route": ["E_dep", "S4", "L3a"]}], "tick_after": 1, "score_delta": 0.0, "events": [{"tick": 1, "type": "departure_window_open", "train": "T1"}, {"tick": 1, "type": "departure_window_open", "train": "T2"}], "wall_time": 1794622784.362}
+{"type": "step", "decision_id": 2, "commands": [], "tick_after": 5, "score_delta": 0.0, "events": [{"tick": 5, "type": "departure_window_open", "train": "T3"}], "wall_time": 1794622786.189}

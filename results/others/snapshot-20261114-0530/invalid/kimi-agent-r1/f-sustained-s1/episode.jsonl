@@ -1,0 +1,5 @@
+{"type": "header", "scenario": "f-sustained-s1", "scenario_hash": "f23003525ff056c6", "wall_time": 1794622760.767}
+{"type": "step", "decision_id": 1, "commands": [{"train": "T1", "action": "route", "route": ["W_dep", "S1", "L1a", "S2", "L2a"]}, {"train": "T2", "action": "route", "route": ["E_dep", "S4", "L3a", "S3", "L2b"]}], "tick_after": 1, "score_delta": 0.0, "events": [{"tick": 1, "type": "departure_window_open", "train": "T1"}], "wall_time": 1794622780.088}
+{"type": "step", "decision_id": 2, "commands": [], "tick_after": 2, "score_delta": 0.0, "events": [{"tick": 2, "type": "departure_window_open", "train": "T2"}], "wall_time": 1794622781.945}
+{"type": "step", "decision_id": 3, "commands": [], "tick_after": 7, "score_delta": 0.0, "events": [], "wall_time": 1794622783.61}
+{"type": "step", "decision_id": 4, "commands": [{"train": "T1", "action": "route", "route": ["S1", "L1a", "S2", "L2a", "S3", "L3a", "S4", "E_arr"]}, {"train": "T2", "action": "route", "route": ["S4", "L3a", "S3", "L2b", "S2", "L1b", "S1", "W_arr"]}], "tick_after": 11, "score_delta": 0.0, "events": [{"tick": 11, "type": "departure_window_open", "train": "T3"}], "wall_time": 1794622796.011}

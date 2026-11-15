@@ -1,0 +1,3 @@
+{"type": "header", "scenario": "d-density-s1", "scenario_hash": "73b7b5aa7225a41c", "wall_time": 1794622760.72}
+{"type": "step", "decision_id": 1, "commands": [{"train": "T1", "action": "route", "route": ["W_dep", "S1", "L1a", "S2", "L2a"]}, {"train": "T2", "action": "route", "route": ["E_dep", "S4", "L3a", "S3", "L2b"]}], "tick_after": 1, "score_delta": 0.0, "events": [{"tick": 1, "type": "departure_window_open", "train": "T1"}, {"tick": 1, "type": "departure_window_open", "train": "T2"}], "wall_time": 1794622774.759}
+{"type": "step", "decision_id": 2, "commands": [], "tick_after": 5, "score_delta": 0.0, "events": [{"tick": 5, "type": "departure_window_open", "train": "T3"}], "wall_time": 1794622776.092}

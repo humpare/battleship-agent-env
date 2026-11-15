@@ -1,0 +1,11 @@
+{
+ "scenario": "duel-s3",
+ "score": 0.722222,
+ "winner": "you",
+ "won": true,
+ "finished": true,
+ "enemy_cells_hit": 9,
+ "own_cells_left": 4,
+ "your_shots": 20,
+ "opponent_shots": 16
+}

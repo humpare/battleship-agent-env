@@ -1,0 +1,186 @@
+{
+ "scenario": "f-sustained-s1",
+ "scenario_hash": "f23003525ff056c6",
+ "score": 0.125,
+ "completed": 2,
+ "trains": 16,
+ "unfinished": 14,
+ "total_lateness": 0,
+ "final_tick": 941,
+ "decisions": 4,
+ "diagnostics": {
+  "blocked_train_ticks": 0,
+  "deadlocked_trains": [],
+  "malfunctions_seen": 1
+ },
+ "per_train": [
+  {
+   "train": "T1",
+   "completed": true,
+   "arrival_tick": 49,
+   "deadline": 79,
+   "lateness": 0,
+   "score": 1.0,
+   "departed": true,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T2",
+   "completed": true,
+   "arrival_tick": 58,
+   "deadline": 80,
+   "lateness": 0,
+   "score": 1.0,
+   "departed": true,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T3",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 89,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T4",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 90,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T5",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 97,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T6",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 102,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T7",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 102,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T8",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 113,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T9",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 116,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T10",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 122,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T11",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 128,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T12",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 132,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T13",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 144,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T14",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 144,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T15",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 158,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  },
+  {
+   "train": "T16",
+   "completed": false,
+   "arrival_tick": null,
+   "deadline": 164,
+   "lateness": null,
+   "score": 0.0,
+   "departed": false,
+   "blocked_ticks": 0
+  }
+ ],
+ "mode": "agent",
+ "wall_seconds": 35.4,
+ "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://inference.verda.com/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+ "model": "kimi-k3-1-pro",
+ "llm_calls": 6,
+ "prompt_tokens": 26498,
+ "completion_tokens": 2842,
+ "llm_seconds": 35.3
+}

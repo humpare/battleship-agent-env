@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+runs/
+jobs/
+.pytest_cache/
+tasks/smoke-6/
+.env
+train/data/
+train/out/
+
+# kept locally, not part of the submission
+docs/research/
+docs/ablations/
+results/incident_scan.txt
+results/lot-pilot/
+src/incident/
+src/lotrelease/
+scripts/incident_*.py
+scripts/lot_*.py
+scripts/run_queue.sh
+train/setup.log

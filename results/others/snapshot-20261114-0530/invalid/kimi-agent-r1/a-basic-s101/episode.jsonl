@@ -1,0 +1,2 @@
+{"type": "header", "scenario": "a-basic-s101", "scenario_hash": "6f551b6c56714035", "wall_time": 1794622760.782}
+{"type": "step", "decision_id": 1, "commands": [{"train": "T1", "action": "route", "route": ["W_dep", "S1", "L1a"]}, {"train": "T2", "action": "route", "route": ["E_dep", "S2", "L1b"]}, {"train": "T3", "action": "hold"}, {"train": "T4", "action": "hold"}], "tick_after": 1, "score_delta": 0.0, "events": [{"tick": 1, "type": "departure_window_open", "train": "T1"}], "wall_time": 1794622791.759}

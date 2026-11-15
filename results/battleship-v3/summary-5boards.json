@@ -1,0 +1,125 @@
+{
+ "reference": {
+  "boards": 5,
+  "runs": 5,
+  "errors": 0,
+  "mean_score": 0.989,
+  "ci95": [
+   0.967,
+   1.0
+  ],
+  "wins": 5,
+  "finished": 5,
+  "shot_quality": 0.998,
+  "shot_quality_over_100_fleets_left": 1.0,
+  "shot_quality_100_or_fewer_left": 0.997,
+  "shots_at_under_5pct_cells": 0.0,
+  "shots_at_certain_water": 0.0,
+  "first_shot": {
+   "A1": 5
+  },
+  "distinct_fleets": 1,
+  "most_common_fleet_runs": 5,
+  "fleets_with_a_ship_on_A1": 0,
+  "refused_requests": 0,
+  "by_board": {
+   "bs5-s101": 1.0,
+   "bs5-s102": 1.0,
+   "bs5-s103": 1.0,
+   "bs5-s104": 0.944444,
+   "bs5-s105": 1.0
+  }
+ },
+ "nothing": {
+  "boards": 5,
+  "runs": 5,
+  "errors": 0,
+  "mean_score": 0.0,
+  "ci95": [
+   0.0,
+   0.0
+  ],
+  "wins": 0,
+  "finished": 0,
+  "shot_quality": null,
+  "shot_quality_over_100_fleets_left": null,
+  "shot_quality_100_or_fewer_left": null,
+  "shots_at_under_5pct_cells": null,
+  "shots_at_certain_water": null,
+  "first_shot": {},
+  "distinct_fleets": 0,
+  "most_common_fleet_runs": 0,
+  "fleets_with_a_ship_on_A1": 0,
+  "refused_requests": 0,
+  "by_board": {
+   "bs5-s101": 0.0,
+   "bs5-s102": 0.0,
+   "bs5-s103": 0.0,
+   "bs5-s104": 0.0,
+   "bs5-s105": 0.0
+  }
+ },
+ "stop-early": {
+  "boards": 5,
+  "runs": 5,
+  "errors": 0,
+  "mean_score": 0.144,
+  "ci95": [
+   0.122,
+   0.167
+  ],
+  "wins": 0,
+  "finished": 0,
+  "shot_quality": 1.0,
+  "shot_quality_over_100_fleets_left": 1.0,
+  "shot_quality_100_or_fewer_left": 1.0,
+  "shots_at_under_5pct_cells": 0.0,
+  "shots_at_certain_water": 0.0,
+  "first_shot": {
+   "A1": 5
+  },
+  "distinct_fleets": 1,
+  "most_common_fleet_runs": 5,
+  "fleets_with_a_ship_on_A1": 0,
+  "refused_requests": 0,
+  "by_board": {
+   "bs5-s101": 0.166667,
+   "bs5-s102": 0.166667,
+   "bs5-s103": 0.111111,
+   "bs5-s104": 0.111111,
+   "bs5-s105": 0.166667
+  }
+ },
+ "kimi": {
+  "boards": 5,
+  "runs": 15,
+  "errors": 0,
+  "mean_score": 0.467,
+  "ci95": [
+   0.378,
+   0.556
+  ],
+  "wins": 5,
+  "finished": 14,
+  "shot_quality": 0.91,
+  "shot_quality_over_100_fleets_left": 0.869,
+  "shot_quality_100_or_fewer_left": 0.945,
+  "shots_at_under_5pct_cells": 0.0,
+  "shots_at_certain_water": 0.0,
+  "first_shot": {
+   "C3": 14,
+   "A1": 1
+  },
+  "distinct_fleets": 5,
+  "most_common_fleet_runs": 11,
+  "fleets_with_a_ship_on_A1": 15,
+  "refused_requests": 0,
+  "by_board": {
+   "bs5-s101": 0.425926,
+   "bs5-s102": 0.3148146666666667,
+   "bs5-s103": 0.4629626666666667,
+   "bs5-s104": 0.5185186666666667,
+   "bs5-s105": 0.611111
+  }
+ }
+}

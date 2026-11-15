@@ -1,0 +1,7 @@
+task                             reference                   nothing                stop-early                      kimi
+duel5-exact-s1                       0.889                     0.000                     0.167                     0.167
+duel5-exact-s2                       0.944                     0.000                     0.222                     0.000
+duel5-exact-s3                       0.556                     0.000                     0.056                     0.222
+duel5-exact-s4                       0.667                     0.000                     0.056                     0.833
+duel5-exact-s5                       0.889                     0.000                     0.056                     0.056
+MEAN                                 0.789                     0.000                     0.111                     0.256

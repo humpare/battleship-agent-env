@@ -1,0 +1,6 @@
+30 boards
+reference (exact search + placement table)    mean score 0.994   wins 30/30
+exact search, random placement                mean score 0.663   wins 22/30
+checkerboard hunt, random placement           mean score 0.356   wins 7/30
+random shots, random placement                mean score 0.115   wins 0/30
+stop after 4 shots                            mean score 0.156   wins 0/30

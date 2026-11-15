@@ -1,0 +1,6 @@
+{"type": "header", "scenario": "duel5-exact-s2", "scenario_hash": "60507efd014daf88", "wall_time": 1794636220.68}
+{"type": "place", "ships": [["D3", "E3"], ["A5", "B5"], ["C1", "D1", "E1"], ["B3"], ["D5"]], "wall_time": 1794636229.408}
+{"type": "fire", "target": "A1", "your_shot": {"cell": "A1", "result": "hit"}, "opponent_shots": [], "score_after": 0.055556, "wall_time": 1794636229.42}
+{"type": "fire", "target": "E1", "your_shot": {"cell": "E1", "result": "sunk", "ship_length": 1}, "opponent_shots": [], "score_after": 0.111111, "wall_time": 1794636229.43}
+{"type": "fire", "target": "B1", "your_shot": {"cell": "B1", "result": "hit"}, "opponent_shots": [], "score_after": 0.166667, "wall_time": 1794636229.438}
+{"type": "fire", "target": "C1", "your_shot": {"cell": "C1", "result": "sunk", "ship_length": 3}, "opponent_shots": [], "score_after": 0.222222, "wall_time": 1794636229.445}
